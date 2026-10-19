@@ -1,0 +1,4 @@
+# rust-lld (ships with rustup) writes PE export forwarders correctly;
+# MSVC link.exe 14.51 rejects "/EXPORT:Name=module.Name" with LNK2001.
+[target.x86_64-pc-windows-msvc]
+linker = "rust-lld"
