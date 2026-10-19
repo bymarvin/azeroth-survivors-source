@@ -1,0 +1,26 @@
+name: audit
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Hygiene gate (no local paths, secrets, keys, game assets, RE material, or unguarded test hooks)
+        run: python scripts/hygiene_gate.py
+
+  reproduce:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install the pinned Rust toolchain
+        run: rustup show   # rust-toolchain.toml pins the channel; rustup installs it
+      - name: Reproducible rebuild and hash comparison
+        shell: pwsh
+        run: powershell -NoProfile -File scripts/reproduce.ps1

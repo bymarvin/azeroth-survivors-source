@@ -1,18 +1,36 @@
-# Azeroth Survivors Together - source
+# Azeroth Survivors Together — co-op source (public audit copy)
 
-Source code of everything the Azeroth Survivors Together co-op mod ships, so anyone can read and audit it.
+This repository is the **source for everything the co-op mod ships** — the native co-op engine DLL, its network
+helper, the Python launcher/room client/updater, and the build scripts — published so anyone can read exactly what
+runs on their machine and rebuild the shipped binaries byte-for-byte. **There is no cryptocurrency mining, no
+telemetry, and no network use beyond forming and running a co-op game.** See [AUDIT.md](AUDIT.md) for the full,
+evidence-backed account and [VERIFY.md](VERIFY.md) to reproduce the released hashes yourself.
 
-- `crates/` Rust workspace: the in-process co-op engine (`avrt.dll`, a proxy for the game's `avrt.dll`), the network helper `azcoop-net.exe`, protocol, state, game-logic and patch crates.
-- `dllshim/` Python shim that starts the engine and carries the party channel.
-- `launcher/` the Python launcher, room browser, updater and the lobby/relay client code as shipped in the package.
-- `payload/` the profile and hook data shipped with the Native engine (per game build).
-- `tools/`, `scripts/` build, release and packaging scripts, plus `scripts/hygiene_gate.py` (checks that no game files, keys or private material are in this repo).
-- Signed releases: https://github.com/bymarvin/azeroth-survivors-together/releases
+It is an add-on for the single-player game *Azeroth Survivors* (a.k.a. *wenilla-rogue*). **No game code, assets, or
+data are included or redistributed** — the mod only loads alongside a copy of the game the player already owns.
 
-## What it does and does not do
-- It only talks to the co-op lobby/relay servers (`lobby.azsurvivors-*.duckdns.org`, TCP 47771 for the relay), GitHub release downloads (updates, game-file mirror) and, in LAN mode, other PCs on your local network or VPN.
-- It does not mine anything, does not use your GPU/CPU beyond the game and the small network helper, and does not read or send your personal files. Your own game folder is only read; the co-op works on a copy.
-- Saves of the single-player game are never written by the co-op (separate co-op profile).
-- Updates are signed (Ed25519); the public key is in the source. No game assets or decompiled code are included here.
+## What is here
 
-Build instructions and hash verification will follow (`VERIFY.md`). License: MIT.
+| Path | What it is |
+|---|---|
+| `src/`, `crates/`, `build.rs`, `Cargo.toml`, `Cargo.lock`, `rust-toolchain.toml`, `res/` | The native co-op engine **`avrt.dll`** and the network helper **`azcoop-net.exe`** (Rust). `avrt.dll` is a proxy DLL: it forwards every real `avrt.dll` export to the system DLL and adds the co-op core. |
+| `dllshim/` | The small Python shim that selects the native engine, prepares the co-op folder, and launches the game with the DLL. |
+| `launcher/` | The Python launcher, room browser / lobby client, peer transport, relay, and self-updater that ship in the package. |
+| `payload/` | The verified per-build DLL profiles and the reviewed hook table that ship in the `native` channel payload (data only — hook addresses and field offsets, no game code). |
+| `tools/` | Build and release scripts: the reproducible DLL build, the channel-payload staging, and the release packager. |
+| `scripts/hygiene_gate.py` | A gate (run in CI) that fails if anything that must not be public — local paths, secrets, keys, game assets, reverse-engineering material, or an unguarded test hook — is present. |
+| `.github/workflows/audit.yml` | CI that runs the hygiene gate and rebuilds `avrt.dll`, comparing its hash to the released one. |
+
+## What is deliberately NOT here
+
+Game executable/data/assets; any decompiled game code or reverse-engineering notes; the private signing key; secrets,
+tokens, SSH keys, or server credentials; and local machine paths. The hygiene gate enforces this on every push.
+
+The live-test switches (`AZCOOP_TEST_*`) exist only behind the Cargo feature `test-hooks` and are **never** in a
+shipped build — the release build is compiled without the feature and the release script refuses any binary that
+still contains the string. See [AUDIT.md](AUDIT.md#test-hooks).
+
+## License
+
+**A license has not been chosen yet** — see [LICENSE](LICENSE). Do not treat this as released under any license until
+the owner fills it in.
