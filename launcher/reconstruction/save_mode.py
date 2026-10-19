@@ -47,7 +47,11 @@ def mode_path(root):
     return Path(root) / MODE_FILE
 
 
-PROFILE_ENV = 'COOP_PROFILE_FOLDER'  # a channel's own co-op profile (0.0.24: coop-lab\personal-0.99.0), set by the start path
+PROFILE_ENV = 'COOP_PROFILE_FOLDER'  # the Native engine's own co-op profile (0.0.25: coop-lab/personal-native), set by the start path
+HEROES_FILE = 'heroes-question.txt'  # in the Native profile: the answer to the one-time hero question (copied | declined | kept)
+OLD_NATIVE_PROFILES = (Path('coop-lab') / 'personal-0.99.0',)  # the 0.0.24 test channel's heroes, a fallback source of the hero copy
+# (the DLL chat's interim test profile was never shipped, so it is not a source)
+HEROES_QUESTION = 'Copy your co-op heroes to the Native engine? Your Classic heroes stay as they are. [Y/n]: '
 
 FIRST_START_QUESTION_CHANNEL = (
     'This co-op channel keeps its own heroes, separate from your single-player save and from the 0.95.0 co-op.\n'
@@ -125,7 +129,7 @@ def status_line(root, mode=None):
     if mode == SHARED:
         return ('[ WARN ] Saves: shared with the single-player save (%APPDATA%\\wenilla-rogue), two-way with backups, '
                 'merge and repair; co-op profile ' + str(profile_folder(root)))
-    return ('[ INFO ] Saves: separate – co-op heroes in ' + str(profile_save(root)) +
+    return ('[ INFO ] Saves: separate - co-op heroes in ' + str(profile_save(root)) +
             '; the single-player save is not touched')
 
 
@@ -297,6 +301,7 @@ def panel_status(root, exe=None, key=None, source=None):
     return dict(mode=mode, line=status_line(root, mode), profile=str(profile_save(root)), heroes=not profile_is_empty(root),
                 first_start=mode == SEPARATE and profile_is_empty(root), channel_profile=channel_profile(root),
                 coop095_heroes=channel_profile(root) and default_profile_save(root).is_file(),
+                heroes_question=heroes_question_due(root),
                 single_player=single_player_state(root, exe, key, source), backups=len(backups), word=CONFIRM_WORD)
 
 
@@ -309,7 +314,7 @@ def set_mode_confirmed(root, mode, word=None, source=None, running=None):
         return dict(changed=False, backup=None)
     if mode == SHARED:
         if channel_profile(root):
-            raise Refused('Shared saves are only for the 0.95.0 co-op channel; this channel always keeps its own heroes.')
+            raise Refused('Shared saves are only for the Classic engine (0.95.0); the Native engine always keeps its own heroes.')
         if (word or '').strip() != CONFIRM_WORD:
             raise Refused('Not linked: type %s exactly to share saves. Nothing changed.' % CONFIRM_WORD)
         if game_running() if running is None else running:
@@ -348,7 +353,7 @@ def import_confirmed(root, source=None, exe=None, key=None):
 def import_coop_confirmed(root, exe=None, key=None):
     """Channel profile only: one upgrade copy of the 0.95.0 co-op heroes (never back), under the profile lock."""
     if not channel_profile(root):
-        raise Refused('Copying the 0.95.0 co-op heroes is for the 0.99.0 channel.')
+        raise Refused('Copying the Classic co-op heroes is for the Native engine.')
     source = default_profile_save(root)
     with profile_lock(root):
         try:
@@ -359,6 +364,59 @@ def import_coop_confirmed(root, exe=None, key=None):
         except (OSError, ValueError) as error:
             raise Refused('The 0.95.0 co-op heroes could not be read (%s); nothing changed.' % error) from None
     return dict(note=note, backup=backup.name if backup else None)
+
+
+def hero_source(root):
+    """Where the hero copy into the Native profile comes from: the Classic (0.95.0) co-op heroes, else the heroes of the 0.0.24
+    test channel (coop-lab/personal-0.99.0). None when there are none."""
+    for candidate in (default_profile_save(root), *(Path(root) / old / 'characters.txt' for old in OLD_NATIVE_PROFILES)):
+        if candidate.is_file() and candidate != profile_save(root):
+            return candidate
+    return None
+
+
+def heroes_answer(root):
+    try:
+        return (profile_folder(root) / HEROES_FILE).read_text(encoding='utf-8').split()[0]
+    except (OSError, UnicodeError, IndexError):
+        return None
+
+
+def heroes_question_due(root):
+    """Ask once, only in the Native profile, only while it has no heroes and there are heroes to copy (new players: no question)."""
+    return channel_profile(root) and heroes_answer(root) is None and profile_is_empty(root) and hero_source(root) is not None
+
+
+def answer_heroes_question(root, copy, exe=None, key=None):
+    """The player's answer, remembered so it is never asked again. A copy is one-way and never overwrites heroes the Native profile
+    already has (answer 'kept'); the Classic heroes stay as they are."""
+    if not channel_profile(root):
+        raise Refused('The hero copy is for the Native engine.')
+    with profile_lock(root):
+        if heroes_answer(root) is not None:
+            return dict(answer=heroes_answer(root), changed=False, note=None)
+        note = None
+        if not copy:
+            answer = 'declined'
+        elif not profile_is_empty(root):
+            answer = 'kept'
+        else:
+            source = hero_source(root)
+            if source is None:
+                answer = 'declined'
+            else:
+                try:
+                    key, _ = _key_and_text(root, source.read_bytes(), exe, key)
+                    _, note = import_single_player(root, source, exe, key, convert=False)
+                except (OSError, ValueError) as error:
+                    raise Refused('Your co-op heroes could not be copied (%s); nothing changed.' % error) from None
+                answer = 'copied'
+        folder = profile_folder(root)
+        folder.mkdir(parents=True, exist_ok=True)
+        temporary = folder / (HEROES_FILE + '.tmp')
+        temporary.write_text(answer + '\n', encoding='utf-8')
+        temporary.replace(folder / HEROES_FILE)
+    return dict(answer=answer, changed=True, note=note)
 
 
 def repair_check(root, source=None, exe=None, key=None):
@@ -433,6 +491,10 @@ def panel_request(root, data, open_folder=None):
         if data.get('confirm') is not True:
             raise Refused('Import not confirmed; nothing changed.')
         return import_coop_confirmed(root)
+    if op == 'heroes_answer':
+        if data.get('copy') not in (True, False):
+            raise Refused('Answer the hero question with copy or no copy.')
+        return answer_heroes_question(root, data['copy'])
     if op == 'repair_check':
         return repair_check(root)
     if op == 'repair':

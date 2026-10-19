@@ -247,6 +247,18 @@ def save_setup(root, args, interactive, ask=input, say=lambda text: print(text, 
                 say('[FAILED] Copying the single-player heroes: ' + str(error) + '. The co-op heroes are unchanged.')
         else:
             say('[ INFO ] Import not confirmed; the co-op heroes are unchanged.')
+    elif save_mode.channel_profile(root):
+        # Native engine (0.0.25): no first-start question for new players; existing players are asked ONCE whether their co-op
+        # heroes come along (one-way copy, never overwrites). Without a console the room browser asks.
+        if save_mode.heroes_question_due(root) and interactive:
+            answer = prompt(save_mode.HEROES_QUESTION).strip().lower()
+            try:
+                result = save_mode.answer_heroes_question(root, answer in ('', 'y', 'yes'))
+                say('[  OK  ] ' + {'copied': 'Your co-op heroes were copied to the Native engine (the Classic heroes stay).',
+                                   'declined': 'The Native engine starts with new heroes (your Classic heroes stay).',
+                                   'kept': 'The Native engine already has heroes; nothing was copied.'}[result['answer']])
+            except save_mode.Refused as error:
+                say('[ WARN ] ' + str(error))
     elif save_mode.read_mode(root) == save_mode.SEPARATE and save_mode.profile_is_empty(root) and interactive:
         save_mode.first_start(root, prompt, say)
     say(save_mode.status_line(root))

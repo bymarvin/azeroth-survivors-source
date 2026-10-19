@@ -1,4 +1,5 @@
-"""The room browser's "Co-op channel" panel (0.0.24, WP3): 0.95.0 (default) or 0.99.0 (DLL beta).
+"""The room browser's "Engine" panel (0.0.25): Native (DLL, the default) or Classic (0.95.0, the fallback).
+(0.0.24 called it the "Co-op channel" panel with the channels 0.95.0 / 0.99.0; internal names keep "channel".)
 
 A thin layer over game_channel (WP2, DLL chat): no channel logic here, only the page's requests and the slow
 search kept in a background thread so the page can poll. The page asks the player; every call here is checked again
@@ -8,6 +9,25 @@ import threading
 from pathlib import Path
 
 CHANNELS = ('0.95.0', '0.99.0')
+ENGINES = ('native', 'classic')
+# What the player can do about a failed Native start (reason codes of game_channel / channel_start, 0.0.25 contract)
+FIXES = {'not_found': 'pick_folder', 'unsupported_build': 'pick_folder', 'no_space': 'copy_again', 'copy_failed': 'copy_again',
+         'payload_missing': 'allow_av', 'paused': None, 'rollout_off': None, 'start_failed': None}
+
+
+def engine_status(status):
+    """game_channel's status in engine terms. The 0.0.25 API names the chosen engine ('engine'); the 0.0.24 API only had the channel
+    ('active': 0.95.0 / 0.99.0)."""
+    status = dict(status)
+    engine = status.get('engine')
+    if engine not in ENGINES:
+        engine = 'native' if status.get('active') in ('0.99.0', 'native') else 'classic'
+    last = status.get('last') if isinstance(status.get('last'), dict) else None
+    fallback = None
+    if last and last.get('chosen') == 'native' and last.get('engine') == 'classic' and last.get('code'):
+        fallback = dict(code=last['code'], text=last.get('text') or '', fix=FIXES.get(last['code']))
+    status.update(engine=engine, fallback=fallback, supported=list(status.get('supported') or []))
+    return status
 
 
 class Refused(Exception):
@@ -70,10 +90,11 @@ def panel_request(root, data, coop_running=False, local=None, module=None):
     op = data.get('op')
     if gc is None:
         if op == 'status':
-            return dict(available=False, active='0.95.0', local_version=(local or (None, None))[0], local_build=(local or (None, None))[1])
-        raise Refused('This launcher has no 0.99.0 beta yet.', 'unavailable')
+            return dict(available=False, active='0.95.0', engine='classic', fallback=None, supported=[],
+                        local_version=(local or (None, None))[0], local_build=(local or (None, None))[1])
+        raise Refused('This launcher has no Native engine files yet.', 'unavailable')
     if op == 'status':
-        status = dict(_call(gc.channel_status, root, coop_running=coop_running))
+        status = engine_status(_call(gc.channel_status, root, coop_running=coop_running))
         status.update(available=True, local_version=(local or (None, None))[0], local_build=(local or (None, None))[1],
                       search=search_state(), copy=_call(gc.copy_progress, root))
         return status
@@ -89,7 +110,7 @@ def panel_request(root, data, coop_running=False, local=None, module=None):
     if op == 'locate_folder':
         path = str(data.get('path') or '').strip()
         if not path:
-            raise Refused('Enter the folder of your Azeroth Survivors 0.99.0 game.', 'not_found')
+            raise Refused('Enter the folder of your Azeroth Survivors game.', 'not_found')
         return _call(gc.locate_folder, root, path[:400])
     if op == 'copy_start':
         if data.get('confirm') is not True:
@@ -99,6 +120,14 @@ def panel_request(root, data, coop_running=False, local=None, module=None):
         return _call(gc.copy_progress, root)
     if op == 'copy_cancel':
         return _call(gc.copy_cancel, root)
+    if op == 'set_engine':
+        engine = str(data.get('engine'))
+        if engine not in ENGINES:
+            raise Refused('Unknown engine.', 'unknown')
+        if hasattr(gc, 'set_engine'):
+            return _call(gc.set_engine, root, engine, coop_running=coop_running)
+        result = _call(gc.set_active, root, '0.99.0' if engine == 'native' else '0.95.0', coop_running=coop_running)
+        return dict(changed=result.get('changed'), engine=engine)
     if op == 'set_active':
         channel = str(data.get('channel'))
         if channel not in CHANNELS:

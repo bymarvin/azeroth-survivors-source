@@ -1,0 +1,26 @@
+[package]
+name = "azsurvivors-installer"
+version = "1.0.0"
+edition = "2021"
+description = "Azeroth Survivors Together web installer (no admin; signed release, resumable downloads)"
+
+[[bin]]
+name = "azsurvivors-installer"
+path = "src/main.rs"
+
+[dependencies]
+ed25519-dalek = { version = "2", default-features = false, features = ["std"] }
+sha2 = "0.10"
+serde_json = "1"
+base64 = "0.22"
+miniz_oxide = "0.8"  # inflate for the runtime ZIP (pure Rust, no tar.exe under Wine)
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+# Debug information goes into a separate PDB next to the exe (crash analysis), never into the exe;
+# build.rs links with /Brepro and /PDBALTPATH:%_PDB% (reproducible, no build path).
+debug = "line-tables-only"
+strip = "none"
+panic = "abort"

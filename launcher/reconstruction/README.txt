@@ -205,7 +205,7 @@ loot, saves, zone changes and reconnect are unfinished.
 There is no network listener or online transport.
 
 Run from this folder's parent with the existing bundled Python:
-  & '%USERPROFILE%\...' reconstruction/visibility_bridge.py --seconds 180 --shared-world
+  & python reconstruction/visibility_bridge.py --seconds 180 --shared-world
 Add --demo to animate remote avatars using explicitly synthetic positions.
 Without --shared-world, native enemy/combat simulations remain independent.
 Both sandbox configs are set to 1100x700 windowed mode. Both characters initially
@@ -278,7 +278,7 @@ The reference module alone does not connect to the EXE; see the adapter above.
 
 RUN THE CHECK
 From the game folder:
-  & '%USERPROFILE%\...' -m unittest discover -s reconstruction -v
+  & python -m unittest discover -s reconstruction -v
 Or use any existing Python 3.10+ interpreter with that same -m command.
 
 WHAT IS RECONSTRUCTED

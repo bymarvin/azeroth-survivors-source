@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 import queue
+import re
 import secrets
 import socket
 import ssl
@@ -28,6 +29,43 @@ except ImportError as _missing:  # The first co-op module this process needs: sa
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+
+def local_engine():
+    """'native' when this room client runs the Native (DLL) engine (dllshim installs its stand-ins, importing dll_shim,
+    before the room client loads), else 'classic'. COOP_ENGINE overrides it for tests."""
+    forced = os.environ.get('COOP_ENGINE', '').strip().lower()
+    if forced in ('native', 'classic'):
+        return forced
+    return 'native' if 'dll_shim' in sys.modules else 'classic'
+
+
+ENGINE_SUFFIX = '+native'  # Rooms carry the engine in their version ("0.100.1+native"); none = Classic (0.0.24 and older).
+
+
+def room_version(version):
+    """The version a room advertises: the game version, plus the engine suffix on Native. Every directory since 0.0.10
+    accepts it (letters, digits, . + -, at most 32), so no lobby update is needed and old clients keep working."""
+    version = str(version or 'Unknown')[:32 - len(ENGINE_SUFFIX)]
+    return version + ENGINE_SUFFIX if local_engine() == 'native' else version
+
+
+def engine_and_game(version):
+    """('Native' | 'Classic', game version) of a room or launcher version string."""
+    text = str(version or 'Unknown')
+    if text.endswith(ENGINE_SUFFIX):
+        return 'Native', text[:-len(ENGINE_SUFFIX)] or 'Unknown'
+    return 'Classic', text
+
+
+def engine_mismatch_text(room_version_text, own_version_text):
+    room_engine, room_game = engine_and_game(room_version_text)
+    own_engine, own_game = engine_and_game(own_version_text)
+    return (f'This room plays {room_engine} on game {room_game}; you are on {own_engine} {own_game}. '
+            'Everyone in a room needs the same engine and game version.')
+
+
+MISMATCH = re.compile(r"^Your game \((?P<own>[^)]*)\) differs from the room's game \((?P<room>[^)]*)\)")
 
 
 def rejection_reason(error):
@@ -117,6 +155,10 @@ def failure_description(error, directory):
         except ValueError:
             status = 'Unknown status'
         reason = rejection_reason(error) if error.code == 400 else None
+        mismatch = MISMATCH.match(reason or '')
+        if mismatch and mismatch['own'] != 'another version':
+            # 0.0.25: name engine and game on both sides instead of the directory's build text.
+            reason = engine_mismatch_text(mismatch['room'], mismatch['own']).rstrip('.')
         if reason:
             code = getattr(error, 'coop_code', None)
             # The directory's own words; the endpoint adds nothing for the player, the code helps support.
@@ -227,7 +269,7 @@ class RoomClient:
         self.stopped = threading.Event()
         self.lock = threading.RLock()
         self.build = hashlib.sha256(Path(os.environ.get('COOP_EXECUTABLE', ROOT / 'AzerothSurvivors.exe')).read_bytes()).hexdigest()
-        self.version = game_version(Path(os.environ.get('COOP_EXECUTABLE', ROOT / 'AzerothSurvivors.exe')), self.build)
+        self.version = room_version(game_version(Path(os.environ.get('COOP_EXECUTABLE', ROOT / 'AzerothSurvivors.exe')), self.build))
 
     def request(self, path, data=None, authenticated=False, token=None):
         headers = {'Content-Type': 'application/json'}
@@ -423,7 +465,7 @@ class RoomClient:
 
     def reset_session(self):
         self.build = hashlib.sha256(Path(os.environ.get('COOP_EXECUTABLE', ROOT / 'AzerothSurvivors.exe')).read_bytes()).hexdigest()
-        self.version = game_version(Path(os.environ.get('COOP_EXECUTABLE', ROOT / 'AzerothSurvivors.exe')), self.build)
+        self.version = room_version(game_version(Path(os.environ.get('COOP_EXECUTABLE', ROOT / 'AzerothSurvivors.exe')), self.build))
         self.cancel.clear()
         self.launched = self.room_detached = False
         self.error = None
@@ -1293,7 +1335,8 @@ class UI(BaseHTTPRequestHandler):
             elif self.path == '/rooms':
                 client = self.server.client
                 listing = client.rooms() if getattr(client, 'lan', None) is not None else client.request('/rooms')
-                self.reply(200, dict(listing, local_build=client.build, local_version=client.version))
+                self.reply(200, dict(listing, local_build=client.build, local_version=client.version,
+                                     local_engine=local_engine()))
             else:
                 self.reply(404, dict(error='Not found'))
         except TAB_GONE:
@@ -1311,15 +1354,15 @@ class UI(BaseHTTPRequestHandler):
                 raise ValueError('Request is too large')
             data = json.loads(self.rfile.read(size))
             client = self.server.client
-            if self.path == '/channel':  # Co-op channel panel (0.0.24): 0.95.0 or the 0.99.0 DLL beta
+            if self.path == '/channel':  # Engine panel (0.0.25): Native (DLL, default) or Classic (0.95.0)
                 import channel_panel
                 if client.isolated_profile:
-                    raise channel_panel.Refused('This launcher uses a disposable test profile; switch the co-op channel in the normal launcher.')
+                    raise channel_panel.Refused('This launcher uses a disposable test profile; switch the engine in the normal launcher.')
                 coop_running = bool(client.membership or client.worker and client.worker.is_alive() or getattr(client, 'hosting', False))
                 restart = os.environ.get('COOP_CHANNEL_RESTART') == '1'  # the launcher restarts us on exit code 3 (WP4)
                 if data.get('op') == 'restart':
                     if not restart or coop_running:
-                        raise channel_panel.Refused('Close the co-op and start Start-Coop.cmd again to use the new channel.', 'restart_manual')
+                        raise channel_panel.Refused('Close the co-op and start Start-Coop.cmd again to use the other engine.', 'restart_manual')
                     self.reply(200, dict(restarting=True))
                     self.server.exit_code = CHANNEL_SWITCHED
                     threading.Thread(target=self.server.shutdown, daemon=True, name='channel-restart').start()
@@ -1327,7 +1370,9 @@ class UI(BaseHTTPRequestHandler):
                 result = channel_panel.panel_request(ROOT, data, coop_running=coop_running,
                                                      local=(getattr(client, 'version', None), getattr(client, 'build', None)))
                 if data.get('op') == 'status':
-                    result = dict(result, restart_supported=restart)
+                    # the engine this room browser runs: the start path sets COOP_CHANNEL for Native (0.99.0 in 0.0.24, native in 0.0.25)
+                    running = 'native' if os.environ.get('COOP_CHANNEL', '') not in ('', '0.95.0', 'classic') else 'classic'
+                    result = dict(result, restart_supported=restart, running=running)
                 self.reply(200, result)
                 return
             if self.path == '/saves':  # Saves panel (0.0.23): mode, import, repair, open folder

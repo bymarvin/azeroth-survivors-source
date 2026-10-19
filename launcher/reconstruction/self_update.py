@@ -264,6 +264,7 @@ def ensure_closed(root):
 
 GITHUB_HOSTS = ('github.com', '.githubusercontent.com')  # Release assets redirect to *.githubusercontent.com.
 MAX_REDIRECTS = 5
+PROGRESS_BYTES = 8 * 2**20  # Downloads from this size on report progress once a second.
 
 
 class NotDirect(Refused):
@@ -366,10 +367,21 @@ class Net:
                     mode = 'ab' if have else 'wb'
                     with open(part, mode) as stream:
                         written = have
+                        # Big files: one progress line per second (MiB, MiB/s, ETA), so a slow source never looks
+                        # like a hang (0.0.25: a 478 MiB game file took minutes without a line).
+                        started = last = time.monotonic()
                         while True:
                             chunk = response.read(1 << 20)
                             if not chunk:
                                 break
+                            now = time.monotonic()
+                            if size >= PROGRESS_BYTES and now - last >= 1.0:
+                                last = now
+                                rate = (written - have) / max(now - started, 1e-3)
+                                eta = (size - written) / rate if rate > 0 else 0
+                                log(f'{100 * written // size:3d} %', f'{target.name}: {written / 2**20:.0f}/{size / 2**20:.0f} MiB '
+                                                                    f'from {self.host(response.geturl())}, {rate / 2**20:.1f} MiB/s, '
+                                                                    f'about {eta:.0f} s left')
                             if written == 0 and external and chunk.lstrip()[:15].lower().startswith(
                                     (b'<!doctype html', b'<html')):
                                 raise NotDirect(f'{target.name}: the address returns a web page, not the file')

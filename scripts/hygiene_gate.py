@@ -44,6 +44,14 @@ TESTHOOK = re.compile(r'(?:env::var|std::env::var|getenv|environ(?:\.get)?\(|Get
 FEATURE_GUARD = re.compile(r'feature\s*=\s*"test-hooks"')
 
 
+KNOWN_FALSE_POSITIVES = {  # (file suffix, substring): reason
+    ('installer-updater/installer/build.rs','1.0.0.0'): 'Windows manifest assembly version',
+    ('installer-updater/updater/build.rs','0.0.11.0'): 'Windows manifest assembly version',
+    ('installer-updater/installer/src/main.rs','D:'): 'unit-test example path / user hint text',
+    ('installer-updater/installer/src/main.rs','Users'): 'unit-test example path',
+    ('installer-updater/updater/src/repair.rs','patch.MPQ'): 'unit-test file name inside a temp dir (no game data)',
+}
+
 def ip_allowed(ip):
     if ip.startswith(ALLOWED_IP_PREFIX):
         return True
@@ -75,6 +83,10 @@ def gated_module_files():
     return stems
 
 
+def known_fp(rel, line):
+    return any(rel == f and sub in line for (f, sub) in KNOWN_FALSE_POSITIVES)
+
+
 def scan():
     hits, testhooks = [], []
     gated = gated_module_files()
@@ -94,6 +106,8 @@ def scan():
             hits.append((rel, 0, 'non-text file', 'not valid UTF-8; a binary slipped in'))
             continue
         for n, line in enumerate(lines, 1):
+            if known_fp(rel, line):
+                continue
             for name, rx, note in FORBIDDEN:
                 if rx.search(line):
                     hits.append((rel, n, name, note))
