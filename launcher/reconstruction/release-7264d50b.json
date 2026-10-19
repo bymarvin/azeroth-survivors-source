@@ -1,0 +1,1837 @@
+{
+ "adapter_profile": {
+  "reference_sha256": "20d4ce5fb1232dac64bc00a4d8c9f2bcae43fb8373ea3fa95350ab8c4f20d618",
+  "sha256": "7264d50b82a1ecc2b5f0fcf2f29669c2acaa8bb87c058e17898a47a12984ff30",
+  "release_version": "7264d50b-candidate",
+  "review_method": "0.93.1 (0315cf38) -> 7264d50b durch Befehlsausrichtung (coop-lab/port-7264/map_7264.py, build_7264.py, decisions_7264.py); Code-Varianten Familie 47e4; native Abnahme ausstehend",
+  "adapter_contracts_verified": true,
+  "runtime_equivalent": false,
+  "unresolved_contracts": [],
+  "addresses": [
+   {
+    "reference": 8656,
+    "candidate": 8656
+   },
+   {
+    "reference": 87664256,
+    "candidate": 88164544
+   },
+   {
+    "reference": 87664313,
+    "candidate": 88164601
+   },
+   {
+    "reference": 87664464,
+    "candidate": 88164752
+   },
+   {
+    "reference": 87760336,
+    "candidate": 88321264
+   },
+   {
+    "reference": 87801968,
+    "candidate": 88222480
+   },
+   {
+    "reference": 87827014,
+    "candidate": 88229305
+   },
+   {
+    "reference": 87828352,
+    "candidate": 88229862
+   },
+   {
+    "reference": 87863152,
+    "candidate": 88278160
+   },
+   {
+    "reference": 87865342,
+    "candidate": 88279045
+   },
+   {
+    "reference": 87884672,
+    "candidate": 88039424
+   },
+   {
+    "reference": 87932880,
+    "candidate": 88378608
+   },
+   {
+    "reference": 87950800,
+    "candidate": 88400000
+   },
+   {
+    "reference": 87979557,
+    "candidate": 88435168
+   },
+   {
+    "reference": 87979572,
+    "candidate": 88435183
+   },
+   {
+    "reference": 88000068,
+    "candidate": 88460132
+   },
+   {
+    "reference": 88001649,
+    "candidate": 88461709
+   },
+   {
+    "reference": 88001651,
+    "candidate": 88461711
+   },
+   {
+    "reference": 88001672,
+    "candidate": 88461732
+   },
+   {
+    "reference": 88002366,
+    "candidate": 88462429
+   },
+   {
+    "reference": 88002380,
+    "candidate": 88462445
+   },
+   {
+    "reference": 88006763,
+    "candidate": 88466908
+   },
+   {
+    "reference": 88007336,
+    "candidate": 88611285
+   },
+   {
+    "reference": 88008577,
+    "candidate": 88612552
+   },
+   {
+    "reference": 88009502,
+    "candidate": 88613640
+   },
+   {
+    "reference": 88009519,
+    "candidate": 88613657
+   },
+   {
+    "reference": 88017008,
+    "candidate": 88623616
+   },
+   {
+    "reference": 88017335,
+    "candidate": 88623931
+   },
+   {
+    "reference": 88017344,
+    "candidate": 88623939
+   },
+   {
+    "reference": 88020131,
+    "candidate": 88626659
+   },
+   {
+    "reference": 88020137,
+    "candidate": 88626665
+   },
+   {
+    "reference": 88022882,
+    "candidate": 88466919
+   },
+   {
+    "reference": 88024086,
+    "candidate": 88468533
+   },
+   {
+    "reference": 88025647,
+    "candidate": 88469310
+   },
+   {
+    "reference": 88027614,
+    "candidate": 88471265
+   },
+   {
+    "reference": 88027813,
+    "candidate": 88471461
+   },
+   {
+    "reference": 88027928,
+    "candidate": 88471576
+   },
+   {
+    "reference": 88037088,
+    "candidate": 88486823
+   },
+   {
+    "reference": 88037384,
+    "candidate": 88487129
+   },
+   {
+    "reference": 88067200,
+    "candidate": 88512672
+   },
+   {
+    "reference": 88067255,
+    "candidate": 88512727
+   },
+   {
+    "reference": 88067664,
+    "candidate": 88513136
+   },
+   {
+    "reference": 88079296,
+    "candidate": 88527936
+   },
+   {
+    "reference": 88084880,
+    "candidate": 88535360
+   },
+   {
+    "reference": 88085792,
+    "candidate": 88537184
+   },
+   {
+    "reference": 88085847,
+    "candidate": 88537239
+   },
+   {
+    "reference": 88113920,
+    "candidate": 88568880
+   },
+   {
+    "reference": 88114034,
+    "candidate": 88569004
+   },
+   {
+    "reference": 88121152,
+    "candidate": 88580448
+   },
+   {
+    "reference": 88121597,
+    "candidate": 88580893
+   },
+   {
+    "reference": 88121600,
+    "candidate": 88580896
+   },
+   {
+    "reference": 88121724,
+    "candidate": 88581027
+   },
+   {
+    "reference": 88123300,
+    "candidate": 88582614
+   },
+   {
+    "reference": 88123632,
+    "candidate": 88577920
+   },
+   {
+    "reference": 88124015,
+    "candidate": 88583343
+   },
+   {
+    "reference": 88124082,
+    "candidate": 88583410
+   },
+   {
+    "reference": 88124480,
+    "candidate": 88584064
+   },
+   {
+    "reference": 88124603,
+    "candidate": 88584187
+   },
+   {
+    "reference": 88124609,
+    "candidate": 88584193
+   },
+   {
+    "reference": 88125791,
+    "candidate": 88585378
+   },
+   {
+    "reference": 88127290,
+    "candidate": 88586061
+   },
+   {
+    "reference": 88127297,
+    "candidate": 88586061
+   },
+   {
+    "reference": 88127389,
+    "candidate": 88586079
+   },
+   {
+    "reference": 88128092,
+    "candidate": 88586592
+   },
+   {
+    "reference": 88128096,
+    "candidate": 88586596
+   },
+   {
+    "reference": 88128983,
+    "candidate": 88587306
+   },
+   {
+    "reference": 88130247,
+    "candidate": 88588545
+   },
+   {
+    "reference": 88130458,
+    "candidate": 88589737
+   },
+   {
+    "reference": 88133493,
+    "candidate": 88591853
+   },
+   {
+    "reference": 88133548,
+    "candidate": 88591894
+   },
+   {
+    "reference": 88138520,
+    "candidate": 88596650
+   },
+   {
+    "reference": 88138957,
+    "candidate": 88597086
+   },
+   {
+    "reference": 88146272,
+    "candidate": 88605120
+   },
+   {
+    "reference": 88151072,
+    "candidate": 88640752
+   },
+   {
+    "reference": 88155248,
+    "candidate": 88645648
+   },
+   {
+    "reference": 88159648,
+    "candidate": 88651296
+   },
+   {
+    "reference": 88181920,
+    "candidate": 88679040
+   },
+   {
+    "reference": 88214224,
+    "candidate": 88719360
+   },
+   {
+    "reference": 88248704,
+    "candidate": 88757856
+   },
+   {
+    "reference": 88331808,
+    "candidate": 88293504
+   },
+   {
+    "reference": 88535120,
+    "candidate": 582432
+   },
+   {
+    "reference": 88573248,
+    "candidate": 88318576
+   },
+   {
+    "reference": 88634928,
+    "candidate": 89369408
+   },
+   {
+    "reference": 90742287,
+    "candidate": 91432671
+   },
+   {
+    "reference": 90745872,
+    "candidate": 91445280
+   },
+   {
+    "reference": 90758800,
+    "candidate": 91449168
+   },
+   {
+    "reference": 92390572,
+    "candidate": 93082860
+   },
+   {
+    "reference": 107159200,
+    "candidate": 107919080
+   },
+   {
+    "reference": 107179872,
+    "candidate": 107939792
+   },
+   {
+    "reference": 107187424,
+    "candidate": 107947576
+   },
+   {
+    "reference": 107361120,
+    "candidate": 109806088
+   },
+   {
+    "reference": 107367192,
+    "candidate": 109812664
+   }
+  ],
+  "fields": [
+   {
+    "domain": "batch_frame",
+    "reference": 2456,
+    "candidate": 824
+   },
+   {
+    "domain": "batch_frame",
+    "reference": 2464,
+    "candidate": 832
+   },
+   {
+    "domain": "game",
+    "reference": 720,
+    "candidate": 520
+   },
+   {
+    "domain": "game",
+    "reference": 728,
+    "candidate": 528
+   },
+   {
+    "domain": "game",
+    "reference": 760,
+    "candidate": 560
+   },
+   {
+    "domain": "game",
+    "reference": 844,
+    "candidate": 644
+   },
+   {
+    "domain": "game",
+    "reference": 960,
+    "candidate": 760
+   },
+   {
+    "domain": "game",
+    "reference": 1176,
+    "candidate": 1000
+   },
+   {
+    "domain": "game",
+    "reference": 1184,
+    "candidate": 1008
+   },
+   {
+    "domain": "game",
+    "reference": 1192,
+    "candidate": 1016
+   },
+   {
+    "domain": "game",
+    "reference": 1196,
+    "candidate": 1020
+   },
+   {
+    "domain": "game",
+    "reference": 1200,
+    "candidate": 1024
+   },
+   {
+    "domain": "game",
+    "reference": 1208,
+    "candidate": 1032
+   },
+   {
+    "domain": "game",
+    "reference": 1288,
+    "candidate": 1112
+   },
+   {
+    "domain": "game",
+    "reference": 1292,
+    "candidate": 1116
+   },
+   {
+    "domain": "game",
+    "reference": 1312,
+    "candidate": 1136
+   },
+   {
+    "domain": "game",
+    "reference": 1316,
+    "candidate": 1140
+   },
+   {
+    "domain": "game",
+    "reference": 1336,
+    "candidate": 1160
+   },
+   {
+    "domain": "game",
+    "reference": 1400,
+    "candidate": 1224
+   },
+   {
+    "domain": "game",
+    "reference": 1408,
+    "candidate": 1232
+   },
+   {
+    "domain": "game",
+    "reference": 1416,
+    "candidate": 1240
+   },
+   {
+    "domain": "game",
+    "reference": 1440,
+    "candidate": 1264
+   },
+   {
+    "domain": "game",
+    "reference": 1472,
+    "candidate": 1296
+   },
+   {
+    "domain": "game",
+    "reference": 1496,
+    "candidate": 1320
+   },
+   {
+    "domain": "game",
+    "reference": 1512,
+    "candidate": 1336
+   },
+   {
+    "domain": "game",
+    "reference": 1520,
+    "candidate": 1344
+   },
+   {
+    "domain": "game",
+    "reference": 1536,
+    "candidate": 1360
+   },
+   {
+    "domain": "game",
+    "reference": 1544,
+    "candidate": 1368
+   },
+   {
+    "domain": "game",
+    "reference": 1552,
+    "candidate": 1376
+   },
+   {
+    "domain": "game",
+    "reference": 1576,
+    "candidate": 1400
+   },
+   {
+    "domain": "game",
+    "reference": 1608,
+    "candidate": 1432
+   },
+   {
+    "domain": "game",
+    "reference": 1616,
+    "candidate": 1440
+   },
+   {
+    "domain": "game",
+    "reference": 1624,
+    "candidate": 1448
+   },
+   {
+    "domain": "game",
+    "reference": 1664,
+    "candidate": 1488
+   },
+   {
+    "domain": "game",
+    "reference": 1756,
+    "candidate": 1640
+   },
+   {
+    "domain": "game",
+    "reference": 1760,
+    "candidate": 1644
+   },
+   {
+    "domain": "game",
+    "reference": 1764,
+    "candidate": 1648
+   },
+   {
+    "domain": "game",
+    "reference": 1856,
+    "candidate": 1736
+   },
+   {
+    "domain": "game",
+    "reference": 2048,
+    "candidate": 2136
+   },
+   {
+    "domain": "game",
+    "reference": 2056,
+    "candidate": 2144
+   },
+   {
+    "domain": "game",
+    "reference": 2072,
+    "candidate": 2160
+   },
+   {
+    "domain": "game",
+    "reference": 2080,
+    "candidate": 2168
+   },
+   {
+    "domain": "game",
+    "reference": 2088,
+    "candidate": 2176
+   },
+   {
+    "domain": "game",
+    "reference": 2096,
+    "candidate": 2184
+   },
+   {
+    "domain": "game",
+    "reference": 2112,
+    "candidate": 2216
+   },
+   {
+    "domain": "game",
+    "reference": 2156,
+    "candidate": 2260
+   },
+   {
+    "domain": "game",
+    "reference": 2160,
+    "candidate": 2268
+   },
+   {
+    "domain": "game",
+    "reference": 2164,
+    "candidate": 2272
+   },
+   {
+    "domain": "game",
+    "reference": 2212,
+    "candidate": 2336
+   },
+   {
+    "domain": "game",
+    "reference": 2245,
+    "candidate": 2370
+   },
+   {
+    "domain": "game",
+    "reference": 2249,
+    "candidate": 2376
+   },
+   {
+    "domain": "game",
+    "reference": 2255,
+    "candidate": 2383
+   },
+   {
+    "domain": "game_extent",
+    "reference": 2256,
+    "candidate": 2384
+   },
+   {
+    "domain": "game_update_frame",
+    "reference": 392,
+    "candidate": 664
+   },
+   {
+    "domain": "game_update_frame",
+    "reference": 968,
+    "candidate": 816
+   },
+   {
+    "domain": "game_update_frame",
+    "reference": 976,
+    "candidate": 824
+   },
+   {
+    "domain": "game_update_frame",
+    "reference": 992,
+    "candidate": 840
+   },
+   {
+    "domain": "map",
+    "reference": 0,
+    "candidate": 8
+   },
+   {
+    "domain": "map",
+    "reference": 8,
+    "candidate": 16
+   },
+   {
+    "domain": "map",
+    "reference": 64,
+    "candidate": 88
+   },
+   {
+    "domain": "map",
+    "reference": 160,
+    "candidate": 184
+   },
+   {
+    "domain": "server",
+    "reference": 16,
+    "candidate": 16
+   },
+   {
+    "domain": "server",
+    "reference": 2328,
+    "candidate": 2456
+   },
+   {
+    "domain": "enemy_frame",
+    "reference": 992,
+    "candidate": 656
+   },
+   {
+    "domain": "enemy_frame",
+    "reference": 976,
+    "candidate": 632
+   },
+   {
+    "domain": "enemy_frame",
+    "reference": 208,
+    "candidate": 0
+   },
+   {
+    "domain": "enemy_frame",
+    "reference": 740,
+    "candidate": 164
+   }
+  ],
+  "patches": [
+   {
+    "reference": 87664256,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 87801968,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 87828352,
+    "expected": "ff5020",
+    "candidate_bytes": "ff5020"
+   },
+   {
+    "reference": 87863152,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 87932880,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 87950800,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 87979557,
+    "expected": "0f85dde10000",
+    "candidate_bytes": "0f85f3ca0000"
+   },
+   {
+    "reference": 88001649,
+    "expected": "7215",
+    "candidate_bytes": "7215"
+   },
+   {
+    "reference": 88002366,
+    "expected": "498d8588050000488985e8020000",
+    "candidate_bytes": "f3450f1085d4080000498d8538050000"
+   },
+   {
+    "reference": 88008577,
+    "expected": "f30f10862c0100000f2ec70f868e000000",
+    "candidate_bytes": "f3410f108424400100000f2ec60f86a5000000"
+   },
+   {
+    "reference": 88009502,
+    "expected": "450f28cf440f5c8dd0000000f3450f16e9",
+    "candidate_bytes": "450f28cf440f5c4d00410f28c1410f59c1"
+   },
+   {
+    "reference": 88017335,
+    "expected": "f2410f108998040000",
+    "candidate_bytes": "f20f108ee8030000"
+   },
+   {
+    "reference": 88020131,
+    "expected": "0f82c7f3ffff",
+    "candidate_bytes": "0f8217f4ffff"
+   },
+   {
+    "reference": 88022882,
+    "expected": "f20f10be980400008b86a0040000",
+    "candidate_bytes": "f2410f10bde8030000418b85f0030000"
+   },
+   {
+    "reference": 88024086,
+    "expected": "f30f598624050000e8ec792900f3410f5fc5",
+    "candidate_bytes": "f30f598674040000e89d3a2d00f30f5f0506684600"
+   },
+   {
+    "reference": 88025647,
+    "expected": "8b8eb804000001c1898eb8040000",
+    "candidate_bytes": "8b8e0804000001c1898e08040000"
+   },
+   {
+    "reference": 88027614,
+    "expected": "8b8eb804000001c1898eb8040000",
+    "candidate_bytes": "8b8e0804000001c1898e08040000"
+   },
+   {
+    "reference": 88027813,
+    "expected": "f30f598624050000e85d6b2900f3410f5fc2",
+    "candidate_bytes": "f30f598674040000e82d2f2d00f3410f5fc4"
+   },
+   {
+    "reference": 88027928,
+    "expected": "8b8eb804000001c1898eb8040000",
+    "candidate_bytes": "8b8e0804000001c1898e08040000"
+   },
+   {
+    "reference": 88067200,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88067664,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88079296,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88085792,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88121152,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88121597,
+    "expected": "4839d10f839e060000488b8ed8020000",
+    "candidate_bytes": "4839d10f83b0060000488b8e10020000"
+   },
+   {
+    "reference": 88121600,
+    "expected": "0f839e060000",
+    "candidate_bytes": "0f83b0060000"
+   },
+   {
+    "reference": 88123632,
+    "expected": "4156",
+    "candidate_bytes": "4157"
+   },
+   {
+    "reference": 88124015,
+    "expected": "f2410f1086800000000f28ce0f5cc8",
+    "candidate_bytes": "f2410f1086980000000f28ce0f5cc8"
+   },
+   {
+    "reference": 88125791,
+    "expected": "f3440f59de",
+    "candidate_bytes": "f3440f59c6"
+   },
+   {
+    "reference": 88127290,
+    "expected": "4c8ba6800600004889b578010000",
+    "candidate_bytes": "488d8ef80500004c89fa0f28d7e841c80200"
+   },
+   {
+    "reference": 88128092,
+    "expected": "0fb6824c03000004fe",
+    "candidate_bytes": "4889f1e828ddfeff450f57e4"
+   },
+   {
+    "reference": 88130247,
+    "expected": "f30f108844050000",
+    "candidate_bytes": "f3440f10a694040000"
+   },
+   {
+    "reference": 88130458,
+    "expected": "488b8578010000",
+    "candidate_bytes": "ff8668060000"
+   },
+   {
+    "reference": 88133548,
+    "expected": "488b8660030000488b8e68030000",
+    "candidate_bytes": "488b8698020000486b8ea002000058"
+   },
+   {
+    "reference": 88151072,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88214224,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88248704,
+    "expected": "55",
+    "candidate_bytes": "55"
+   },
+   {
+    "reference": 88331808,
+    "expected": "4157",
+    "candidate_bytes": "4157"
+   },
+   {
+    "reference": 88634928,
+    "expected": "55",
+    "candidate_bytes": "55"
+   }
+  ],
+  "required_inputs": {
+   "addresses": [
+    8656,
+    87664256,
+    87664313,
+    87664464,
+    87760336,
+    87801968,
+    87827014,
+    87828352,
+    87863152,
+    87865342,
+    87884672,
+    87932880,
+    87950800,
+    87979557,
+    87979572,
+    88000068,
+    88001649,
+    88001651,
+    88001672,
+    88002366,
+    88002380,
+    88006763,
+    88007336,
+    88008577,
+    88009502,
+    88009519,
+    88017008,
+    88017335,
+    88017344,
+    88020131,
+    88020137,
+    88022882,
+    88024086,
+    88025647,
+    88027614,
+    88027813,
+    88027928,
+    88037088,
+    88037384,
+    88067200,
+    88067255,
+    88067664,
+    88079296,
+    88084880,
+    88085792,
+    88085847,
+    88113920,
+    88114034,
+    88121152,
+    88121597,
+    88121600,
+    88121724,
+    88123300,
+    88123632,
+    88124015,
+    88124082,
+    88124480,
+    88124603,
+    88124609,
+    88125791,
+    88127290,
+    88127297,
+    88127389,
+    88128092,
+    88128096,
+    88128983,
+    88130247,
+    88130458,
+    88133493,
+    88133548,
+    88138520,
+    88138957,
+    88146272,
+    88151072,
+    88155248,
+    88159648,
+    88181920,
+    88214224,
+    88248704,
+    88331808,
+    88535120,
+    88573248,
+    88634928,
+    90742287,
+    90745872,
+    90758800,
+    92390572,
+    107159200,
+    107179872,
+    107187424,
+    107361120,
+    107367192
+   ],
+   "patches": [
+    [
+     87664256,
+     "55"
+    ],
+    [
+     87801968,
+     "55"
+    ],
+    [
+     87828352,
+     "ff5020"
+    ],
+    [
+     87863152,
+     "55"
+    ],
+    [
+     87932880,
+     "55"
+    ],
+    [
+     87950800,
+     "55"
+    ],
+    [
+     87979557,
+     "0f85dde10000"
+    ],
+    [
+     88001649,
+     "7215"
+    ],
+    [
+     88002366,
+     "498d8588050000488985e8020000"
+    ],
+    [
+     88008577,
+     "f30f10862c0100000f2ec70f868e000000"
+    ],
+    [
+     88009502,
+     "450f28cf440f5c8dd0000000f3450f16e9"
+    ],
+    [
+     88017335,
+     "f2410f108998040000"
+    ],
+    [
+     88020131,
+     "0f82c7f3ffff"
+    ],
+    [
+     88022882,
+     "f20f10be980400008b86a0040000"
+    ],
+    [
+     88024086,
+     "f30f598624050000e8ec792900f3410f5fc5"
+    ],
+    [
+     88025647,
+     "8b8eb804000001c1898eb8040000"
+    ],
+    [
+     88027614,
+     "8b8eb804000001c1898eb8040000"
+    ],
+    [
+     88027813,
+     "f30f598624050000e85d6b2900f3410f5fc2"
+    ],
+    [
+     88027928,
+     "8b8eb804000001c1898eb8040000"
+    ],
+    [
+     88067200,
+     "55"
+    ],
+    [
+     88067664,
+     "55"
+    ],
+    [
+     88079296,
+     "55"
+    ],
+    [
+     88085792,
+     "55"
+    ],
+    [
+     88121152,
+     "55"
+    ],
+    [
+     88121597,
+     "4839d10f839e060000488b8ed8020000"
+    ],
+    [
+     88121600,
+     "0f839e060000"
+    ],
+    [
+     88123632,
+     "4156"
+    ],
+    [
+     88124015,
+     "f2410f1086800000000f28ce0f5cc8"
+    ],
+    [
+     88125791,
+     "f3440f59de"
+    ],
+    [
+     88127290,
+     "4c8ba6800600004889b578010000"
+    ],
+    [
+     88128092,
+     "0fb6824c03000004fe"
+    ],
+    [
+     88130247,
+     "f30f108844050000"
+    ],
+    [
+     88130458,
+     "488b8578010000"
+    ],
+    [
+     88133548,
+     "488b8660030000488b8e68030000"
+    ],
+    [
+     88151072,
+     "55"
+    ],
+    [
+     88214224,
+     "55"
+    ],
+    [
+     88248704,
+     "55"
+    ],
+    [
+     88331808,
+     "4157"
+    ],
+    [
+     88634928,
+     "55"
+    ]
+   ],
+   "fields": [
+    [
+     "batch_frame",
+     2456
+    ],
+    [
+     "batch_frame",
+     2464
+    ],
+    [
+     "game",
+     720
+    ],
+    [
+     "game",
+     728
+    ],
+    [
+     "game",
+     760
+    ],
+    [
+     "game",
+     844
+    ],
+    [
+     "game",
+     960
+    ],
+    [
+     "game",
+     1176
+    ],
+    [
+     "game",
+     1184
+    ],
+    [
+     "game",
+     1192
+    ],
+    [
+     "game",
+     1196
+    ],
+    [
+     "game",
+     1200
+    ],
+    [
+     "game",
+     1208
+    ],
+    [
+     "game",
+     1288
+    ],
+    [
+     "game",
+     1292
+    ],
+    [
+     "game",
+     1312
+    ],
+    [
+     "game",
+     1316
+    ],
+    [
+     "game",
+     1336
+    ],
+    [
+     "game",
+     1400
+    ],
+    [
+     "game",
+     1408
+    ],
+    [
+     "game",
+     1416
+    ],
+    [
+     "game",
+     1440
+    ],
+    [
+     "game",
+     1472
+    ],
+    [
+     "game",
+     1496
+    ],
+    [
+     "game",
+     1512
+    ],
+    [
+     "game",
+     1520
+    ],
+    [
+     "game",
+     1536
+    ],
+    [
+     "game",
+     1544
+    ],
+    [
+     "game",
+     1552
+    ],
+    [
+     "game",
+     1576
+    ],
+    [
+     "game",
+     1608
+    ],
+    [
+     "game",
+     1616
+    ],
+    [
+     "game",
+     1624
+    ],
+    [
+     "game",
+     1664
+    ],
+    [
+     "game",
+     1756
+    ],
+    [
+     "game",
+     1760
+    ],
+    [
+     "game",
+     1764
+    ],
+    [
+     "game",
+     1856
+    ],
+    [
+     "game",
+     2048
+    ],
+    [
+     "game",
+     2056
+    ],
+    [
+     "game",
+     2072
+    ],
+    [
+     "game",
+     2080
+    ],
+    [
+     "game",
+     2088
+    ],
+    [
+     "game",
+     2096
+    ],
+    [
+     "game",
+     2112
+    ],
+    [
+     "game",
+     2156
+    ],
+    [
+     "game",
+     2160
+    ],
+    [
+     "game",
+     2164
+    ],
+    [
+     "game",
+     2212
+    ],
+    [
+     "game",
+     2245
+    ],
+    [
+     "game",
+     2249
+    ],
+    [
+     "game",
+     2255
+    ],
+    [
+     "game_extent",
+     2256
+    ],
+    [
+     "game_update_frame",
+     392
+    ],
+    [
+     "game_update_frame",
+     968
+    ],
+    [
+     "game_update_frame",
+     976
+    ],
+    [
+     "game_update_frame",
+     992
+    ],
+    [
+     "map",
+     0
+    ],
+    [
+     "map",
+     8
+    ],
+    [
+     "map",
+     64
+    ],
+    [
+     "map",
+     160
+    ],
+    [
+     "server",
+     16
+    ],
+    [
+     "server",
+     2328
+    ],
+    [
+     "enemy_frame",
+     992
+    ],
+    [
+     "enemy_frame",
+     976
+    ],
+    [
+     "enemy_frame",
+     208
+    ],
+    [
+     "enemy_frame",
+     740
+    ]
+   ]
+  },
+  "native_live_contracts": {
+   "hud": {
+    "rva": "0x54247e6",
+    "server_stack_offset": 1256,
+    "receiver_field": 3816,
+    "vtable_field": 3824,
+    "buffer_register": "rdx",
+    "length_register": "r8",
+    "callback_slot": 32,
+    "stack_register": "rbp",
+    "buffer_stack_offset": 152,
+    "length_stack_offset": 160
+   },
+   "batch": {
+    "call_rva": "0x54245b4",
+    "return_rva": "0x54245b9",
+    "serializer_rva": "0x5424589",
+    "connection_source": "owned_queue",
+    "queue_field": 144,
+    "queue_offset": 16,
+    "packet_stack_register": "rbp",
+    "packet_buffer_stack_offset": 152,
+    "packet_length_stack_offset": 160,
+    "ui_vector": {
+     "stack_register": "rbp",
+     "capacity": 816,
+     "pointer": 824,
+     "count": 832,
+     "element_size": 24
+    }
+   },
+   "connection": {
+    "server_stack_offset": 1256,
+    "capacity_field": 2448,
+    "pointer_field": 2456,
+    "count_field": 2464,
+    "element_size": 176,
+    "receive_queue_field": 136,
+    "queue_offset": 16
+   },
+   "game": {
+    "game_offset": 16
+   }
+  },
+  "dispatch_guards": [
+   {
+    "kind": "cast_tag",
+    "rva": 88623939,
+    "expected": "89d24c8d0520544301496314904c01c2",
+    "table_rva": 109813612,
+    "maximum": 4,
+    "continuation_rva": 88623955,
+    "mandatory_runtime_guard": true,
+    "table_register": "r8"
+   },
+   {
+    "kind": "loot_tag",
+    "rva": 88468800,
+    "expected": "89d849634485004c01e8ffe0",
+    "table_rva": 109813220,
+    "maximum": 6,
+    "continuation_rva": 88468812,
+    "mandatory_runtime_guard": true,
+    "table_register": "r13"
+   }
+  ],
+  "damage_guard": {
+   "rva": 88591944,
+   "expected": "440fb6be11010000",
+   "base": "rsi",
+   "destination": "r15d",
+   "offset": 273,
+   "width": 1,
+   "maximum": 3,
+   "length": 8,
+   "zero_extend_to": 32,
+   "mandatory": true
+  },
+  "effect_guard": {
+   "rva": 88757917,
+   "expected": "418b00",
+   "base": "r8",
+   "destination": "eax",
+   "offset": 0,
+   "width": 4,
+   "maximum": 10,
+   "length": 3,
+   "zeroextend32": true,
+   "borrowed_size": 12,
+   "mandatory": true,
+   "ownership": "borrowed-readable-12"
+  },
+  "pending": [
+   "native Abnahme mit 4 Clients (bindet identity/native_acceptance; ohne sie verweigert der Start)",
+   "party_markers (Raid-Symbole/Minikarte) bleibt f\u00fcr 47e4 abgeschaltet (nur 0.84.3 getestet)"
+  ],
+  "implemented_code_variants": [
+   "updated_layout: Build-Variante (build_variant() -> \"0843\"/\"47e4\") statt nur release_0843()",
+   "native_guest_combat XP Pfad A (0x547c495): maxss xmm0,[rip] -> mov rax,abs; maxss xmm0,[rax]",
+   "visibility_bridge.downed_world_code (47e4): Uhr movss xmm7,[r13+G]; addss xmm7,xmm6; movss [r13+G],xmm7; normal = 9 Bytes + jmp 0x547424f; Konstante movss xmm13,[0x58ab444] + xorps xmm15,xmm15",
+   "visibility_bridge.world_containers_code (47e4): &0x538->rbp+0x320, &0x8a8->+0x288, &0x870->+0x48 (aus Liveness nach 0x547be3c; Methode an 0.84.3 validiert)",
+   "visibility_bridge.downed_hazards_code (47e4): Phasentest cmp byte [r13+0x94e],4; normal = 16 Bytes Original + jmp 0x547accd; downed: Container + Konstante + jmp 0x547be3c",
+   "visibility_bridge Gegner-Datensatz: Stride 0x158, GUID 0x88, ENEMY_RECORD <I28xQ96xf24x3f3fff (parse_native_enemies, native_enemy, native_enemy_array, pursuit_code)",
+   "visibility_bridge.pursuit_code (47e4): Game-Slot enemy_frame 0x260, Ziel enemy_frame 0x50, Host-Z 0x74, Gegner r15, Schwelle movd edx,xmm8, Original 17 Bytes, zur\u00fcck 0x549f3f6",
+   "visibility_bridge.guest_damage_patches (47e4): Z\u00e4hler jmp 0x549893f; mulss->movaps xmm8,xmm6; Klasse xorps xmm12 + jmp 0x5498e0a; Modifikator xorps xmm12; Procs jmp 0x549b36e",
+   "visibility_bridge.dispatch_guard_code (47e4): cast_tag mit r8 (89d2 49b8 table), loot_tag mov eax,ebx/r13",
+   "native_guest_combat Handler (47e4): ENEMY_TARGET Game rsi(168), Gegner-XY xmm? pr\u00fcfen; ENEMY_AOE Game rbx(144), Radius xmm6, Schaden xmm7*xmm12; GROUND_AOE Game r14(232), Boden xmm11, Radius xmm10; Angreifer-Slot enemy/update frame",
+   "native_guest_combat Gast-Spiegelwelt (47e4): KI-Grenze jmp 0x549eb35; restore_game mov r13,[rbp+0x338]; lea rax,[r13+0x538]; mov [rbp+0x320],rax; jmp 0x5480c07",
+   "boss_rewards (47e4): BOSS_DEATH Game=rsi, Definition=rcx, inc [rsi+0x668] emulieren, RIP+6; Guardian-Z\u00e4hler 0x6e8/0x888 \u00fcber Feldtabelle"
+  ]
+ },
+ "menu_contract": {
+  "sha256": "7264d50b82a1ecc2b5f0fcf2f29669c2acaa8bb87c058e17898a47a12984ff30",
+  "reference_sha256": "20d4ce5fb1232dac64bc00a4d8c9f2bcae43fb8373ea3fa95350ab8c4f20d618",
+  "automatic_activation_allowed": false,
+  "variant": "borrowed_map_predicate",
+  "ui_command": 88278160,
+  "command_tags": {
+   "8": 88279996,
+   "9": 88280774,
+   "11": 88278965
+  },
+  "map_select": 88164544,
+  "map_selection": {
+   "reference": 87664256,
+   "candidate": 88164544,
+   "lookup_offset": 208,
+   "lookup_size": 24,
+   "reference_layout": {
+    "stride": 160,
+    "name_pointer": 0,
+    "name_length": 8,
+    "table": 107179872
+   },
+   "candidate_layout": {
+    "stride": 184,
+    "name_pointer": 8,
+    "name_length": 16,
+    "table": 107939792
+   },
+   "names": [
+    "elwynn",
+    "duskwood",
+    "wsg",
+    "ab",
+    "feralas",
+    "arena",
+    "av",
+    "brm",
+    "aq"
+   ],
+   "map_name_lookup_verified": true,
+   "automatic_activation_allowed": false,
+   "scope": "Nine map names and native selection logic only; external dependencies require separate proof"
+  },
+  "host_map_return": 88279045,
+  "enter_contract": {
+   "call": 88279040,
+   "return_site": 88279045,
+   "map_select": 88164544,
+   "account_server_offset": 2472,
+   "config_stack_offset": 2304,
+   "result_stack_offset": 4688,
+   "arguments": {
+    "rcx": "result",
+    "rdx": "account",
+    "r8": "config"
+   }
+  },
+  "baseline_enter": {
+   "call": 87865337,
+   "return_site": 87865342,
+   "map_select": 87664256,
+   "account_server_offset": 2344,
+   "config_stack_offset": 2176,
+   "result_stack_offset": 4432,
+   "arguments": {
+    "rcx": "result",
+    "rdx": "account",
+    "r8": "config"
+   }
+  },
+  "login_predicate": {
+   "entry": 88165008,
+   "map_index": 88054672,
+   "arguments": {
+    "rcx": "account",
+    "edx": "class",
+    "r8": "map_pointer",
+    "r9": "map_length"
+   },
+   "result": "al",
+   "unlock_pointer": 32,
+   "unlock_count": 40,
+   "unlock_stride": 16,
+   "maximum": 9
+  },
+  "login": {
+   "function": 88241712,
+   "predicate": 88165008,
+   "call": 88248309,
+   "branch": 88248317,
+   "expected": "757e",
+   "replacement": "eb7e",
+   "continuation": 88248445,
+   "account_server_offset": 2472,
+   "class_stack_offset": 8449,
+   "requested_map_register": "r15",
+   "requested_length_stack": 8808,
+   "connection_vector_server_offset": 2456,
+   "connection_map_pointer": 152,
+   "connection_map_length": 160,
+   "ownership": "borrowed native map strings; fallback bypass changes control flow only"
+  },
+  "command_destructor": {
+   "entry": 582432,
+   "equivalent_aliases": [
+    582432,
+    1212096,
+    88063024,
+    89036512,
+    89036512
+   ],
+   "variant": "trimmed-command-switch",
+   "expected": "41565657534883ec28",
+   "external_dependencies": [
+    8656
+   ]
+  },
+  "account_config": {
+   "proof": "complete MAP_SELECT logic, typed map-name lookup, unchanged account/config fields and native predicate semantics",
+   "account": {
+    "unlock_pointer": 32,
+    "unlock_count": 40,
+    "unlock_stride": 16,
+    "entry_class": 0,
+    "entry_unlocked_count": 8,
+    "minimum": 1,
+    "maximum": 9
+   },
+   "config": {
+    "map_pointer": 32,
+    "map_length": 40,
+    "class_id": 56
+   },
+   "arguments": {
+    "rcx": "result",
+    "rdx": "account",
+    "r8": "config"
+   }
+  },
+  "victory_cases": "nicht zur Laufzeit benutzt; nicht neu erzeugt",
+  "menu_contract_verified": true,
+  "map_clamp": {
+   "site": 88164601,
+   "expected": "488b4b20488b532848c1e2044531c00f1f8400",
+   "allocation_path": 88164752
+  },
+  "unresolved": [
+   "Complete candidate adapter proof including native allocator dependency"
+  ],
+  "enter_tag": 11
+ },
+ "progression_call_contract": {
+  "reference_sha256": "20d4ce5fb1232dac64bc00a4d8c9f2bcae43fb8373ea3fa95350ab8c4f20d618",
+  "fields": {
+   "level": {
+    "offset": 1016,
+    "width": 4,
+    "reviewed_offset": 1192
+   },
+   "xp": {
+    "offset": 1020,
+    "width": 4,
+    "reviewed_offset": 1196
+   },
+   "phase": {
+    "offset": 2383,
+    "width": 1,
+    "reviewed_offset": 2255
+   },
+   "choices_pointer": {
+    "offset": 1392,
+    "width": 8,
+    "reviewed_offset": 1568
+   },
+   "choices_count": {
+    "offset": 1400,
+    "width": 8,
+    "reviewed_offset": 1576
+   },
+   "choice_kind": {
+    "offset": 2381,
+    "width": 1,
+    "reviewed_offset": 2254
+   },
+   "abilities_capacity": {
+    "offset": 656,
+    "width": 8,
+    "reviewed_offset": 856
+   },
+   "abilities_pointer": {
+    "offset": 664,
+    "width": 8,
+    "reviewed_offset": 864
+   },
+   "abilities_count": {
+    "offset": 672,
+    "width": 8,
+    "reviewed_offset": 872
+   },
+   "pending_talents": {
+    "offset": 2268,
+    "width": 4,
+    "reviewed_offset": 2160
+   },
+   "pending_chests": {
+    "offset": 2272,
+    "width": 4,
+    "reviewed_offset": 2164
+   },
+   "pending_rewards": {
+    "offset": 2276,
+    "width": 4,
+    "reviewed_offset": 2168
+   }
+  },
+  "choice_stride": 160,
+  "choice_title": {
+   "capacity": 0,
+   "pointer": 8,
+   "length": 16,
+   "width": 8,
+   "max_bytes": 1024,
+   "ownership": "native String24; borrowed read only",
+   "runtime_role": "Require exact equality with the selected native UI offer title before CHOOSE"
+  },
+  "pending_by_choice_kind": {
+   "0": "pending_talents",
+   "1": "pending_chests",
+   "2": "pending_rewards"
+  },
+  "ability_contract": {
+   "stride": 88,
+   "definition_pointer": 0,
+   "rank_offset": 8,
+   "rank_width": 4,
+   "definitions_rva": 107952416,
+   "definitions_count": 111,
+   "definition_stride": 120,
+   "name_pointer": 16,
+   "name_length": 24,
+   "new_rank": 1,
+   "offered_ui": {
+    "type": "choices",
+    "array": "choices",
+    "kind": "new",
+    "title_prefix": "New: "
+   },
+   "upgrade_ui": {
+    "kind": "upgrade",
+    "title_format": "{name} rank {rank}",
+    "rank_delta": 1,
+    "rank_delta_source": {
+     "choice_capacity_offset": 120,
+     "choice_pointer_offset": 128,
+     "choice_count_offset": 136,
+     "ability_index_offset": 144,
+     "element_size": 1,
+     "allowed_tags": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "capacity_max_exclusive": 9223372036854775808,
+     "rank_offset": 8,
+     "rank_width": 4,
+     "formula": "previous_native_rank + selected_choice_tag_count"
+    },
+    "requires": "Exact current title equals existing+1; native rank increases by selected stat-tag count; all other abilities unchanged"
+   },
+   "consumption_ui": {
+    "type": "resume"
+   }
+  },
+  "sha256": "7264d50b82a1ecc2b5f0fcf2f29669c2acaa8bb87c058e17898a47a12984ff30",
+  "entries": {
+   "CHOOSE": {
+    "entry": 88719360
+   },
+   "AWARD_XP": {
+    "entry": 88527936
+   }
+  },
+  "review_method": "Exact-release diagnostic fields; native titles, ranks and pending consumption checked on every choice",
+  "layouts_verified": true
+ }
+}

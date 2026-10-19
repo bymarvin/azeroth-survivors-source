@@ -1,0 +1,15 @@
+[package]
+name = "azcoop-state"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op: the Python-compatible 'state' message (build and strictly validate), port of online_bridge.send_state / receive_state"
+license = "MIT"
+publish = false
+
+[dependencies]
+azcoop-world = { path = "../azcoop-world" }
+azcoop-game = { path = "../azcoop-game" }
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip"] }
+base64 = "0.22"
+
+[dev-dependencies]

@@ -1,0 +1,14 @@
+[package]
+name = "azcoop-proto"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op wire protocols: PROTOCOL 5 frames and DLL-helper IPC"
+license = "MIT"
+publish = false
+
+[dependencies]
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip"] }
+flate2 = "1"
+
+[dev-dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_System_ProcessStatus", "Win32_System_Threading"] }

@@ -1,0 +1,71 @@
+{
+ "code_family": "7264",
+ "version": "0.97.1",
+ "family": {
+  "impact_return": 88750302,
+  "impact_victim_slot": 192,
+  "world_slots": [
+   832,
+   792,
+   96
+  ],
+  "path_field": [
+   88914576,
+   88914597,
+   88914791
+  ],
+  "path_field_slots": [
+   152,
+   184,
+   672,
+   16
+  ],
+  "recycle": [
+   [
+    89349698,
+    89349727,
+    89349886
+   ],
+   [
+    89350002,
+    89350031,
+    89350169
+   ]
+  ],
+  "run_meter": [
+   88880332,
+   88880350,
+   89063024
+  ],
+  "skipped_pointer_locals": []
+ },
+ "result_evaluation": {
+  "lock": 4034,
+  "last_phase": 4036,
+  "account": 2480,
+  "class_id": 660,
+  "victory": 2160,
+  "sites": [
+   88423775,
+   88423816
+  ]
+ },
+ "enemy_layout": {
+  "stride": 352,
+  "guid_offset": 136,
+  "guid_gap": 28
+ },
+ "pursuit": {
+  "cursor": 7,
+  "xy": 13
+ },
+ "owners": {
+  "game_update": 88724544,
+  "enemy": 88904704
+ },
+ "enemy_layout_note": "unchanged: no aligned instruction changed an enemy record offset or the stride",
+ "unverified": [
+  "world slot 0x298: majority 0x318 (16 of 20 uses, {'0x318': 16, '0x338': 2, '0x310': 2}), taken",
+  "world slot 0x48: majority 0x60 (7 of 9 uses, {'0x60': 7, '0x228': 2}), taken"
+ ]
+}

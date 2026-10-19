@@ -1,0 +1,15 @@
+[package]
+name = "azcoop-patch"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op: generated machine code and byte patches per game build, verified byte for byte against the Python generators"
+license = "MIT"
+publish = false
+
+# Pure: byte strings in, byte strings out. The caller reads the build's code bytes through the Image trait.
+[dependencies]
+azcoop-game = { path = "../azcoop-game" }
+
+[dev-dependencies]
+serde_json = { version = "1", features = ["float_roundtrip"] }
+azcoop-exec = { path = "../azcoop-exec" }

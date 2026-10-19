@@ -1,0 +1,76 @@
+{
+ "code_family": "7264",
+ "version": "0.100.1",
+ "family": {
+  "impact_return": 88823742,
+  "impact_victim_slot": 208,
+  "world_slots": [
+   832,
+   792,
+   96
+  ],
+  "path_field": [
+   88989008,
+   88989029,
+   88989223
+  ],
+  "path_field_slots": [
+   152,
+   184,
+   672,
+   16
+  ],
+  "recycle": [
+   [
+    89394418,
+    89394447,
+    89394606
+   ],
+   [
+    89394722,
+    89394751,
+    89394889
+   ]
+  ],
+  "run_meter": [
+   88954652,
+   88954670,
+   89137584
+  ],
+  "skipped_pointer_locals": [
+   [
+    0,
+    168,
+    2156
+   ]
+  ]
+ },
+ "result_evaluation": {
+  "lock": 4162,
+  "last_phase": 4165,
+  "account": 2584,
+  "class_id": 684,
+  "victory": 2200,
+  "sites": [
+   88388559,
+   88388600
+  ]
+ },
+ "enemy_layout": {
+  "stride": 352,
+  "guid_offset": 136,
+  "guid_gap": 28
+ },
+ "pursuit": {
+  "cursor": 7,
+  "xy": 13
+ },
+ "owners": {
+  "game_update": 88797088,
+  "enemy": 88979136
+ },
+ "enemy_layout_note": "unchanged: no aligned instruction changed an enemy record offset or the stride",
+ "unverified": [
+  "path_field target slot: no vote, the previous value is kept; compare the loop-start movaps [rbp+X] by hand"
+ ]
+}

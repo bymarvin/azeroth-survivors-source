@@ -1,0 +1,18 @@
+[package]
+name = "azcoop-logic"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op: the bridge decision logic (revival, team defeat, ...) as pure state machines over an IO trait"
+license = "MIT"
+publish = false
+
+[features]
+# live-test switches only (AZCOOP_TEST_GUEST_LETHAL_AT); never in a shipped build
+test-hooks = []
+
+[dependencies]
+azcoop-world = { path = "../azcoop-world" }
+azcoop-game = { path = "../azcoop-game" }
+
+[dev-dependencies]
+serde_json = { version = "1", features = ["float_roundtrip"] }

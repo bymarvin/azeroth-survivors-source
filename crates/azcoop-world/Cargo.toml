@@ -1,0 +1,13 @@
+[package]
+name = "azcoop-world"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op: bounded parser/rewriter for the native world packets (port of world_packets.py)"
+license = "MIT"
+publish = false
+
+# Pure functions on bytes: no dependencies, no Windows API, no game memory.
+[dependencies]
+
+[dev-dependencies]
+serde_json = "1"

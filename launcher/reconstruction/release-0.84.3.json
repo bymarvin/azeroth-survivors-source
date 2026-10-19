@@ -1,0 +1,1973 @@
+{
+  "adapter_profile": {
+    "reference_sha256": "20d4ce5fb1232dac64bc00a4d8c9f2bcae43fb8373ea3fa95350ab8c4f20d618",
+    "sha256": "dc165e348d0a15062f58d83530619b0f57479028a28507f449c8bcffea0fb306",
+    "release_version": "0.84.3",
+    "review_method": "manual per-executable instruction and owner review",
+    "adapter_contracts_verified": true,
+    "runtime_equivalent": false,
+    "unresolved_contracts": [],
+    "addresses": [
+      {
+        "reference": 8656,
+        "candidate": 8656
+      },
+      {
+        "reference": 87664256,
+        "candidate": 88007744
+      },
+      {
+        "reference": 87664313,
+        "candidate": 88007801
+      },
+      {
+        "reference": 87664464,
+        "candidate": 88007952
+      },
+      {
+        "reference": 87760336,
+        "candidate": 88228576
+      },
+      {
+        "reference": 87801968,
+        "candidate": 87932240
+      },
+      {
+        "reference": 87827014,
+        "candidate": 87938825
+      },
+      {
+        "reference": 87828352,
+        "candidate": 87939382
+      },
+      {
+        "reference": 87863152,
+        "candidate": 87983312
+      },
+      {
+        "reference": 87865342,
+        "candidate": 87985582
+      },
+      {
+        "reference": 87884672,
+        "candidate": 87864176
+      },
+      {
+        "reference": 87932880,
+        "candidate": 88381520
+      },
+      {
+        "reference": 87950800,
+        "candidate": 88394624
+      },
+      {
+        "reference": 87979557,
+        "candidate": 88423800
+      },
+      {
+        "reference": 87979572,
+        "candidate": 88423816
+      },
+      {
+        "reference": 88000068,
+        "candidate": 88444151
+      },
+      {
+        "reference": 88001649,
+        "candidate": 88445729
+      },
+      {
+        "reference": 88001651,
+        "candidate": 88445731
+      },
+      {
+        "reference": 88001672,
+        "candidate": 88445752
+      },
+      {
+        "reference": 88002366,
+        "candidate": 88446442
+      },
+      {
+        "reference": 88002380,
+        "candidate": 88446457
+      },
+      {
+        "reference": 88006763,
+        "candidate": 88450493
+      },
+      {
+        "reference": 88007336,
+        "candidate": 88451070
+      },
+      {
+        "reference": 88008577,
+        "candidate": 88452273
+      },
+      {
+        "reference": 88009502,
+        "candidate": 88453191
+      },
+      {
+        "reference": 88009519,
+        "candidate": 88453208
+      },
+      {
+        "reference": 88017008,
+        "candidate": 88460304
+      },
+      {
+        "reference": 88017335,
+        "candidate": 88460629
+      },
+      {
+        "reference": 88017344,
+        "candidate": 88460638
+      },
+      {
+        "reference": 88020131,
+        "candidate": 88463811
+      },
+      {
+        "reference": 88020137,
+        "candidate": 88463817
+      },
+      {
+        "reference": 88022882,
+        "candidate": 88465885
+      },
+      {
+        "reference": 88024086,
+        "candidate": 88468258
+      },
+      {
+        "reference": 88025647,
+        "candidate": 88467538
+      },
+      {
+        "reference": 88027614,
+        "candidate": 88470045
+      },
+      {
+        "reference": 88027813,
+        "candidate": 88470121
+      },
+      {
+        "reference": 88027928,
+        "candidate": 88470247
+      },
+      {
+        "reference": 88037088,
+        "candidate": 88479842
+      },
+      {
+        "reference": 88037384,
+        "candidate": 88480154
+      },
+      {
+        "reference": 88067200,
+        "candidate": 88511008
+      },
+      {
+        "reference": 88067255,
+        "candidate": 88511063
+      },
+      {
+        "reference": 88067664,
+        "candidate": 88511472
+      },
+      {
+        "reference": 88079296,
+        "candidate": 88521504
+      },
+      {
+        "reference": 88084880,
+        "candidate": 88527360
+      },
+      {
+        "reference": 88085792,
+        "candidate": 88528960
+      },
+      {
+        "reference": 88085847,
+        "candidate": 88529015
+      },
+      {
+        "reference": 88113920,
+        "candidate": 88554704
+      },
+      {
+        "reference": 88114034,
+        "candidate": 88554820
+      },
+      {
+        "reference": 88121152,
+        "candidate": 88561120
+      },
+      {
+        "reference": 88121597,
+        "candidate": 88561565
+      },
+      {
+        "reference": 88121600,
+        "candidate": 88561568
+      },
+      {
+        "reference": 88121724,
+        "candidate": 88561691
+      },
+      {
+        "reference": 88123300,
+        "candidate": 88563268
+      },
+      {
+        "reference": 88123632,
+        "candidate": 88563600
+      },
+      {
+        "reference": 88124015,
+        "candidate": 88563983
+      },
+      {
+        "reference": 88124082,
+        "candidate": 88564050
+      },
+      {
+        "reference": 88124480,
+        "candidate": 88564448
+      },
+      {
+        "reference": 88124603,
+        "candidate": 88564571
+      },
+      {
+        "reference": 88124609,
+        "candidate": 88564577
+      },
+      {
+        "reference": 88125791,
+        "candidate": 88565759
+      },
+      {
+        "reference": 88127290,
+        "candidate": 88567251
+      },
+      {
+        "reference": 88127297,
+        "candidate": 88567258
+      },
+      {
+        "reference": 88127389,
+        "candidate": 88567357
+      },
+      {
+        "reference": 88128092,
+        "candidate": 88568024
+      },
+      {
+        "reference": 88128096,
+        "candidate": 88568028
+      },
+      {
+        "reference": 88128983,
+        "candidate": 88568572
+      },
+      {
+        "reference": 88130247,
+        "candidate": 88569792
+      },
+      {
+        "reference": 88130458,
+        "candidate": 88570003
+      },
+      {
+        "reference": 88133493,
+        "candidate": 88573147
+      },
+      {
+        "reference": 88133548,
+        "candidate": 88573201
+      },
+      {
+        "reference": 88138520,
+        "candidate": 88578561
+      },
+      {
+        "reference": 88138957,
+        "candidate": 88578613
+      },
+      {
+        "reference": 88146272,
+        "candidate": 88586384
+      },
+      {
+        "reference": 88151072,
+        "candidate": 88589488
+      },
+      {
+        "reference": 88155248,
+        "candidate": 88593296
+      },
+      {
+        "reference": 88159648,
+        "candidate": 88596736
+      },
+      {
+        "reference": 88181920,
+        "candidate": 88621008
+      },
+      {
+        "reference": 88214224,
+        "candidate": 88660208
+      },
+      {
+        "reference": 88248704,
+        "candidate": 88693520
+      },
+      {
+        "reference": 88331808,
+        "candidate": 87998032
+      },
+      {
+        "reference": 88535120,
+        "candidate": 26768
+      },
+      {
+        "reference": 88573248,
+        "candidate": 88226304
+      },
+      {
+        "reference": 88634928,
+        "candidate": 88957120
+      },
+      {
+        "reference": 90742287,
+        "candidate": 91064223
+      },
+      {
+        "reference": 90745872,
+        "candidate": 91074416
+      },
+      {
+        "reference": 90758800,
+        "candidate": 91080736
+      },
+      {
+        "reference": 92390572,
+        "candidate": 92709980
+      },
+      {
+        "reference": 107159200,
+        "candidate": 107519672
+      },
+      {
+        "reference": 107179872,
+        "candidate": 107540384
+      },
+      {
+        "reference": 107187424,
+        "candidate": 107548144
+      },
+      {
+        "reference": 107361120,
+        "candidate": 111374392
+      },
+      {
+        "reference": 107367192,
+        "candidate": 111380576
+      }
+    ],
+    "fields": [
+      {
+        "domain": "batch_frame",
+        "reference": 2456,
+        "candidate": 24
+      },
+      {
+        "domain": "batch_frame",
+        "reference": 2464,
+        "candidate": 32
+      },
+      {
+        "domain": "damage_frame",
+        "reference": 376,
+        "candidate": 376
+      },
+      {
+        "domain": "game",
+        "reference": 720,
+        "candidate": 720
+      },
+      {
+        "domain": "game",
+        "reference": 728,
+        "candidate": 728
+      },
+      {
+        "domain": "game",
+        "reference": 760,
+        "candidate": 760
+      },
+      {
+        "domain": "game",
+        "reference": 844,
+        "candidate": 844
+      },
+      {
+        "domain": "game",
+        "reference": 960,
+        "candidate": 960
+      },
+      {
+        "domain": "game",
+        "reference": 1176,
+        "candidate": 1192
+      },
+      {
+        "domain": "game",
+        "reference": 1184,
+        "candidate": 1200
+      },
+      {
+        "domain": "game",
+        "reference": 1192,
+        "candidate": 1208
+      },
+      {
+        "domain": "game",
+        "reference": 1196,
+        "candidate": 1212
+      },
+      {
+        "domain": "game",
+        "reference": 1200,
+        "candidate": 1216
+      },
+      {
+        "domain": "game",
+        "reference": 1208,
+        "candidate": 1224
+      },
+      {
+        "domain": "game",
+        "reference": 1288,
+        "candidate": 1304
+      },
+      {
+        "domain": "game",
+        "reference": 1292,
+        "candidate": 1308
+      },
+      {
+        "domain": "game",
+        "reference": 1312,
+        "candidate": 1328
+      },
+      {
+        "domain": "game",
+        "reference": 1316,
+        "candidate": 1332
+      },
+      {
+        "domain": "game",
+        "reference": 1336,
+        "candidate": 1352
+      },
+      {
+        "domain": "game",
+        "reference": 1400,
+        "candidate": 1416
+      },
+      {
+        "domain": "game",
+        "reference": 1408,
+        "candidate": 1424
+      },
+      {
+        "domain": "game",
+        "reference": 1416,
+        "candidate": 1432
+      },
+      {
+        "domain": "game",
+        "reference": 1440,
+        "candidate": 1456
+      },
+      {
+        "domain": "game",
+        "reference": 1472,
+        "candidate": 1488
+      },
+      {
+        "domain": "game",
+        "reference": 1496,
+        "candidate": 1512
+      },
+      {
+        "domain": "game",
+        "reference": 1512,
+        "candidate": 1528
+      },
+      {
+        "domain": "game",
+        "reference": 1520,
+        "candidate": 1536
+      },
+      {
+        "domain": "game",
+        "reference": 1536,
+        "candidate": 1552
+      },
+      {
+        "domain": "game",
+        "reference": 1544,
+        "candidate": 1560
+      },
+      {
+        "domain": "game",
+        "reference": 1552,
+        "candidate": 1568
+      },
+      {
+        "domain": "game",
+        "reference": 1576,
+        "candidate": 1592
+      },
+      {
+        "domain": "game",
+        "reference": 1608,
+        "candidate": 1624
+      },
+      {
+        "domain": "game",
+        "reference": 1616,
+        "candidate": 1632
+      },
+      {
+        "domain": "game",
+        "reference": 1624,
+        "candidate": 1640
+      },
+      {
+        "domain": "game",
+        "reference": 1664,
+        "candidate": 1680
+      },
+      {
+        "domain": "game",
+        "reference": 1756,
+        "candidate": 1772
+      },
+      {
+        "domain": "game",
+        "reference": 1760,
+        "candidate": 1776
+      },
+      {
+        "domain": "game",
+        "reference": 1764,
+        "candidate": 1780
+      },
+      {
+        "domain": "game",
+        "reference": 1856,
+        "candidate": 1872
+      },
+      {
+        "domain": "game",
+        "reference": 2048,
+        "candidate": 2064
+      },
+      {
+        "domain": "game",
+        "reference": 2056,
+        "candidate": 2072
+      },
+      {
+        "domain": "game",
+        "reference": 2072,
+        "candidate": 2088
+      },
+      {
+        "domain": "game",
+        "reference": 2080,
+        "candidate": 2096
+      },
+      {
+        "domain": "game",
+        "reference": 2088,
+        "candidate": 2104
+      },
+      {
+        "domain": "game",
+        "reference": 2096,
+        "candidate": 2112
+      },
+      {
+        "domain": "game",
+        "reference": 2112,
+        "candidate": 2128
+      },
+      {
+        "domain": "game",
+        "reference": 2156,
+        "candidate": 2172
+      },
+      {
+        "domain": "game",
+        "reference": 2160,
+        "candidate": 2176
+      },
+      {
+        "domain": "game",
+        "reference": 2164,
+        "candidate": 2180
+      },
+      {
+        "domain": "game",
+        "reference": 2212,
+        "candidate": 2228
+      },
+      {
+        "domain": "game",
+        "reference": 2245,
+        "candidate": 2261
+      },
+      {
+        "domain": "game",
+        "reference": 2249,
+        "candidate": 2267
+      },
+      {
+        "domain": "game",
+        "reference": 2255,
+        "candidate": 2273
+      },
+      {
+        "domain": "game_extent",
+        "reference": 2256,
+        "candidate": 2280
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 128,
+        "candidate": 344
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 208,
+        "candidate": 192
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 288,
+        "candidate": 256
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 392,
+        "candidate": 272
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 740,
+        "candidate": 128
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 744,
+        "candidate": 184
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 832,
+        "candidate": 824
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 968,
+        "candidate": 968
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 976,
+        "candidate": 976
+      },
+      {
+        "domain": "game_update_frame",
+        "reference": 992,
+        "candidate": 992
+      },
+      {
+        "domain": "map",
+        "reference": 0,
+        "candidate": 8
+      },
+      {
+        "domain": "map",
+        "reference": 8,
+        "candidate": 16
+      },
+      {
+        "domain": "map",
+        "reference": 64,
+        "candidate": 88
+      },
+      {
+        "domain": "map",
+        "reference": 160,
+        "candidate": 184
+      },
+      {
+        "domain": "server",
+        "reference": 16,
+        "candidate": 16
+      },
+      {
+        "domain": "server",
+        "reference": 2328,
+        "candidate": 2352
+      }
+    ],
+    "patches": [
+      {
+        "reference": 87664256,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 87801968,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 87828352,
+        "expected": "ff5020",
+        "candidate_bytes": "ff5020"
+      },
+      {
+        "reference": 87863152,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 87932880,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 87950800,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 87979557,
+        "expected": "0f85dde10000",
+        "candidate_bytes": "0f851cdc0000"
+      },
+      {
+        "reference": 88001649,
+        "expected": "7215",
+        "candidate_bytes": "7215"
+      },
+      {
+        "reference": 88002366,
+        "expected": "498d8588050000488985e8020000",
+        "candidate_bytes": "498d842498050000488985b8000000"
+      },
+      {
+        "reference": 88008577,
+        "expected": "f30f10862c0100000f2ec70f868e000000",
+        "candidate_bytes": "f30f10862c0100000f2ec70f868e000000"
+      },
+      {
+        "reference": 88009502,
+        "expected": "450f28cf440f5c8dd0000000f3450f16e9",
+        "candidate_bytes": "450f28cf440f5c8dc0000000f3450f16e1"
+      },
+      {
+        "reference": 88017335,
+        "expected": "f2410f108998040000",
+        "candidate_bytes": "f2410f1088a8040000"
+      },
+      {
+        "reference": 88020131,
+        "expected": "0f82c7f3ffff",
+        "candidate_bytes": "0f8247f2ffff"
+      },
+      {
+        "reference": 88022882,
+        "expected": "f20f10be980400008b86a0040000",
+        "candidate_bytes": "f20f10bba8040000448bb3b0040000"
+      },
+      {
+        "reference": 88024086,
+        "expected": "f30f598624050000e8ec792900f3410f5fc5",
+        "candidate_bytes": "f30f598634050000e8709c2700f3410f5fc4"
+      },
+      {
+        "reference": 88025647,
+        "expected": "8b8eb804000001c1898eb8040000",
+        "candidate_bytes": "8b8ec804000001c1898ec8040000"
+      },
+      {
+        "reference": 88027614,
+        "expected": "8b8eb804000001c1898eb8040000",
+        "candidate_bytes": "8b81c804000001f88981c8040000"
+      },
+      {
+        "reference": 88027813,
+        "expected": "f30f598624050000e85d6b2900f3410f5fc2",
+        "candidate_bytes": "f30f598034050000e829952700f3410f5fc6"
+      },
+      {
+        "reference": 88027928,
+        "expected": "8b8eb804000001c1898eb8040000",
+        "candidate_bytes": "8b82c804000001c88982c8040000"
+      },
+      {
+        "reference": 88067200,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88067664,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88079296,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88085792,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88121152,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88121597,
+        "expected": "4839d10f839e060000488b8ed8020000",
+        "candidate_bytes": "4839d10f839e060000488b8ed8020000"
+      },
+      {
+        "reference": 88121600,
+        "expected": "0f839e060000",
+        "candidate_bytes": "0f839e060000"
+      },
+      {
+        "reference": 88123632,
+        "expected": "4156",
+        "candidate_bytes": "4156"
+      },
+      {
+        "reference": 88124015,
+        "expected": "f2410f1086800000000f28ce0f5cc8",
+        "candidate_bytes": "f2410f1086980000000f28ce0f5cc8"
+      },
+      {
+        "reference": 88125791,
+        "expected": "f3440f59de",
+        "candidate_bytes": "f3440f59de"
+      },
+      {
+        "reference": 88127290,
+        "expected": "4c8ba6800600004889b578010000",
+        "candidate_bytes": "4c8bae900600004889b578010000"
+      },
+      {
+        "reference": 88128092,
+        "expected": "0fb6824c03000004fe",
+        "candidate_bytes": "410fb6854c03000004fe"
+      },
+      {
+        "reference": 88130247,
+        "expected": "f30f108844050000",
+        "candidate_bytes": "f30f108a54050000"
+      },
+      {
+        "reference": 88130458,
+        "expected": "488b8578010000",
+        "candidate_bytes": "488b8578010000"
+      },
+      {
+        "reference": 88133548,
+        "expected": "488b8660030000488b8e68030000",
+        "candidate_bytes": "498b8560030000498b8d68030000"
+      },
+      {
+        "reference": 88151072,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88214224,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88248704,
+        "expected": "55",
+        "candidate_bytes": "55"
+      },
+      {
+        "reference": 88331808,
+        "expected": "4157",
+        "candidate_bytes": "4157"
+      },
+      {
+        "reference": 88634928,
+        "expected": "55",
+        "candidate_bytes": "55"
+      }
+    ],
+    "required_inputs": {
+      "addresses": [
+        8656,
+        87664256,
+        87664313,
+        87664464,
+        87760336,
+        87801968,
+        87827014,
+        87828352,
+        87863152,
+        87865342,
+        87884672,
+        87932880,
+        87950800,
+        87979557,
+        87979572,
+        88000068,
+        88001649,
+        88001651,
+        88001672,
+        88002366,
+        88002380,
+        88006763,
+        88007336,
+        88008577,
+        88009502,
+        88009519,
+        88017008,
+        88017335,
+        88017344,
+        88020131,
+        88020137,
+        88022882,
+        88024086,
+        88025647,
+        88027614,
+        88027813,
+        88027928,
+        88037088,
+        88037384,
+        88067200,
+        88067255,
+        88067664,
+        88079296,
+        88084880,
+        88085792,
+        88085847,
+        88113920,
+        88114034,
+        88121152,
+        88121597,
+        88121600,
+        88121724,
+        88123300,
+        88123632,
+        88124015,
+        88124082,
+        88124480,
+        88124603,
+        88124609,
+        88125791,
+        88127290,
+        88127297,
+        88127389,
+        88128092,
+        88128096,
+        88128983,
+        88130247,
+        88130458,
+        88133493,
+        88133548,
+        88138520,
+        88138957,
+        88146272,
+        88151072,
+        88155248,
+        88159648,
+        88181920,
+        88214224,
+        88248704,
+        88331808,
+        88535120,
+        88573248,
+        88634928,
+        90742287,
+        90745872,
+        90758800,
+        92390572,
+        107159200,
+        107179872,
+        107187424,
+        107361120,
+        107367192
+      ],
+      "patches": [
+        [
+          87664256,
+          "55"
+        ],
+        [
+          87801968,
+          "55"
+        ],
+        [
+          87828352,
+          "ff5020"
+        ],
+        [
+          87863152,
+          "55"
+        ],
+        [
+          87932880,
+          "55"
+        ],
+        [
+          87950800,
+          "55"
+        ],
+        [
+          87979557,
+          "0f85dde10000"
+        ],
+        [
+          88001649,
+          "7215"
+        ],
+        [
+          88002366,
+          "498d8588050000488985e8020000"
+        ],
+        [
+          88008577,
+          "f30f10862c0100000f2ec70f868e000000"
+        ],
+        [
+          88009502,
+          "450f28cf440f5c8dd0000000f3450f16e9"
+        ],
+        [
+          88017335,
+          "f2410f108998040000"
+        ],
+        [
+          88020131,
+          "0f82c7f3ffff"
+        ],
+        [
+          88022882,
+          "f20f10be980400008b86a0040000"
+        ],
+        [
+          88024086,
+          "f30f598624050000e8ec792900f3410f5fc5"
+        ],
+        [
+          88025647,
+          "8b8eb804000001c1898eb8040000"
+        ],
+        [
+          88027614,
+          "8b8eb804000001c1898eb8040000"
+        ],
+        [
+          88027813,
+          "f30f598624050000e85d6b2900f3410f5fc2"
+        ],
+        [
+          88027928,
+          "8b8eb804000001c1898eb8040000"
+        ],
+        [
+          88067200,
+          "55"
+        ],
+        [
+          88067664,
+          "55"
+        ],
+        [
+          88079296,
+          "55"
+        ],
+        [
+          88085792,
+          "55"
+        ],
+        [
+          88121152,
+          "55"
+        ],
+        [
+          88121597,
+          "4839d10f839e060000488b8ed8020000"
+        ],
+        [
+          88121600,
+          "0f839e060000"
+        ],
+        [
+          88123632,
+          "4156"
+        ],
+        [
+          88124015,
+          "f2410f1086800000000f28ce0f5cc8"
+        ],
+        [
+          88125791,
+          "f3440f59de"
+        ],
+        [
+          88127290,
+          "4c8ba6800600004889b578010000"
+        ],
+        [
+          88128092,
+          "0fb6824c03000004fe"
+        ],
+        [
+          88130247,
+          "f30f108844050000"
+        ],
+        [
+          88130458,
+          "488b8578010000"
+        ],
+        [
+          88133548,
+          "488b8660030000488b8e68030000"
+        ],
+        [
+          88151072,
+          "55"
+        ],
+        [
+          88214224,
+          "55"
+        ],
+        [
+          88248704,
+          "55"
+        ],
+        [
+          88331808,
+          "4157"
+        ],
+        [
+          88634928,
+          "55"
+        ]
+      ],
+      "fields": [
+        [
+          "batch_frame",
+          2456
+        ],
+        [
+          "batch_frame",
+          2464
+        ],
+        [
+          "damage_frame",
+          376
+        ],
+        [
+          "game",
+          720
+        ],
+        [
+          "game",
+          728
+        ],
+        [
+          "game",
+          760
+        ],
+        [
+          "game",
+          844
+        ],
+        [
+          "game",
+          960
+        ],
+        [
+          "game",
+          1176
+        ],
+        [
+          "game",
+          1184
+        ],
+        [
+          "game",
+          1192
+        ],
+        [
+          "game",
+          1196
+        ],
+        [
+          "game",
+          1200
+        ],
+        [
+          "game",
+          1208
+        ],
+        [
+          "game",
+          1288
+        ],
+        [
+          "game",
+          1292
+        ],
+        [
+          "game",
+          1312
+        ],
+        [
+          "game",
+          1316
+        ],
+        [
+          "game",
+          1336
+        ],
+        [
+          "game",
+          1400
+        ],
+        [
+          "game",
+          1408
+        ],
+        [
+          "game",
+          1416
+        ],
+        [
+          "game",
+          1440
+        ],
+        [
+          "game",
+          1472
+        ],
+        [
+          "game",
+          1496
+        ],
+        [
+          "game",
+          1512
+        ],
+        [
+          "game",
+          1520
+        ],
+        [
+          "game",
+          1536
+        ],
+        [
+          "game",
+          1544
+        ],
+        [
+          "game",
+          1552
+        ],
+        [
+          "game",
+          1576
+        ],
+        [
+          "game",
+          1608
+        ],
+        [
+          "game",
+          1616
+        ],
+        [
+          "game",
+          1624
+        ],
+        [
+          "game",
+          1664
+        ],
+        [
+          "game",
+          1756
+        ],
+        [
+          "game",
+          1760
+        ],
+        [
+          "game",
+          1764
+        ],
+        [
+          "game",
+          1856
+        ],
+        [
+          "game",
+          2048
+        ],
+        [
+          "game",
+          2056
+        ],
+        [
+          "game",
+          2072
+        ],
+        [
+          "game",
+          2080
+        ],
+        [
+          "game",
+          2088
+        ],
+        [
+          "game",
+          2096
+        ],
+        [
+          "game",
+          2112
+        ],
+        [
+          "game",
+          2156
+        ],
+        [
+          "game",
+          2160
+        ],
+        [
+          "game",
+          2164
+        ],
+        [
+          "game",
+          2212
+        ],
+        [
+          "game",
+          2245
+        ],
+        [
+          "game",
+          2249
+        ],
+        [
+          "game",
+          2255
+        ],
+        [
+          "game_extent",
+          2256
+        ],
+        [
+          "game_update_frame",
+          128
+        ],
+        [
+          "game_update_frame",
+          208
+        ],
+        [
+          "game_update_frame",
+          288
+        ],
+        [
+          "game_update_frame",
+          392
+        ],
+        [
+          "game_update_frame",
+          740
+        ],
+        [
+          "game_update_frame",
+          744
+        ],
+        [
+          "game_update_frame",
+          832
+        ],
+        [
+          "game_update_frame",
+          968
+        ],
+        [
+          "game_update_frame",
+          976
+        ],
+        [
+          "game_update_frame",
+          992
+        ],
+        [
+          "map",
+          0
+        ],
+        [
+          "map",
+          8
+        ],
+        [
+          "map",
+          64
+        ],
+        [
+          "map",
+          160
+        ],
+        [
+          "server",
+          16
+        ],
+        [
+          "server",
+          2328
+        ]
+      ]
+    },
+    "native_live_contracts": {
+      "hud": {
+        "rva": "0x53dd936",
+        "server_stack_offset": 664,
+        "receiver_field": 3376,
+        "vtable_field": 3384,
+        "buffer_register": "rdx",
+        "length_register": "r8",
+        "callback_slot": 32,
+        "stack_register": "rbp",
+        "buffer_stack_offset": 296,
+        "length_stack_offset": 304
+      },
+      "batch": {
+        "call_rva": "0x53dd704",
+        "return_rva": "0x53dd709",
+        "serializer_rva": "0x53dd6d9",
+        "connection_source": "owned_queue",
+        "queue_field": 144,
+        "queue_offset": 16,
+        "packet_stack_register": "rbp",
+        "packet_buffer_stack_offset": 296,
+        "packet_length_stack_offset": 304,
+        "ui_vector": {
+          "stack_register": "rbp",
+          "capacity": 16,
+          "pointer": 24,
+          "count": 32,
+          "element_size": 24
+        }
+      },
+      "connection": {
+        "server_stack_offset": 664,
+        "capacity_field": 2344,
+        "pointer_field": 2352,
+        "count_field": 2360,
+        "element_size": 176,
+        "receive_queue_field": 136,
+        "queue_offset": 16
+      },
+      "game": {
+        "game_offset": 16
+      }
+    },
+    "dispatch_guards": [
+      {
+        "kind": "cast_tag",
+        "rva": 88460642,
+        "expected": "89d24c8d0d09bd5d01496314914c01ca",
+        "table_rva": 111381108,
+        "maximum": 4,
+        "continuation_rva": 88460658,
+        "mandatory_runtime_guard": true,
+        "table_register": "r9"
+      },
+      {
+        "kind": "loot_tag",
+        "rva": 88467792,
+        "expected": "89f8496304844c01e0ffe0",
+        "table_rva": 111381128,
+        "maximum": 6,
+        "continuation_rva": 88467803,
+        "mandatory_runtime_guard": true,
+        "table_register": "r12"
+      }
+    ],
+    "damage_guard": {
+      "rva": 88573256,
+      "expected": "410fb6b5f8000000",
+      "base": "r13",
+      "destination": "esi",
+      "offset": 248,
+      "width": 1,
+      "maximum": 3,
+      "length": 8,
+      "zero_extend_to": 32,
+      "mandatory": true
+    },
+    "effect_guard": {
+      "rva": 88693575,
+      "expected": "418b00",
+      "base": "r8",
+      "destination": "eax",
+      "offset": 0,
+      "width": 4,
+      "maximum": 10,
+      "length": 3,
+      "zeroextend32": true,
+      "borrowed_size": 12,
+      "mandatory": true,
+      "ownership": "borrowed-readable-12"
+    }
+  },
+  "menu_contract": {
+    "sha256": "dc165e348d0a15062f58d83530619b0f57479028a28507f449c8bcffea0fb306",
+    "reference_sha256": "20d4ce5fb1232dac64bc00a4d8c9f2bcae43fb8373ea3fa95350ab8c4f20d618",
+    "automatic_activation_allowed": false,
+    "variant": "borrowed_map_predicate",
+    "ui_command": 87983312,
+    "command_tags": {
+      "8": 87985076,
+      "9": 87984877,
+      "10": 87985502
+    },
+    "map_select": 88007744,
+    "map_selection": {
+      "reference": 87664256,
+      "candidate": 88007744,
+      "lookup_offset": 208,
+      "lookup_size": 24,
+      "reference_layout": {
+        "stride": 160,
+        "name_pointer": 0,
+        "name_length": 8,
+        "table": 107179872
+      },
+      "candidate_layout": {
+        "stride": 184,
+        "name_pointer": 8,
+        "name_length": 16,
+        "table": 107540384
+      },
+      "names": [
+        "elwynn",
+        "duskwood",
+        "wsg",
+        "ab",
+        "feralas",
+        "arena",
+        "av",
+        "brm",
+        "aq"
+      ],
+      "map_name_lookup_verified": true,
+      "automatic_activation_allowed": false,
+      "scope": "Nine map names and native selection logic only; external dependencies require separate proof"
+    },
+    "host_map_return": 87985582,
+    "enter_contract": {
+      "call": 87985577,
+      "return_site": 87985582,
+      "map_select": 88007744,
+      "account_server_offset": 2368,
+      "config_stack_offset": 2208,
+      "result_stack_offset": 4488,
+      "arguments": {
+        "rcx": "result",
+        "rdx": "account",
+        "r8": "config"
+      }
+    },
+    "baseline_enter": {
+      "call": 87865337,
+      "return_site": 87865342,
+      "map_select": 87664256,
+      "account_server_offset": 2344,
+      "config_stack_offset": 2176,
+      "result_stack_offset": 4432,
+      "arguments": {
+        "rcx": "result",
+        "rdx": "account",
+        "r8": "config"
+      }
+    },
+    "login_predicate": {
+      "entry": 88008208,
+      "map_index": 87879072,
+      "arguments": {
+        "rcx": "account",
+        "edx": "class",
+        "r8": "map_pointer",
+        "r9": "map_length"
+      },
+      "result": "al",
+      "unlock_pointer": 32,
+      "unlock_count": 40,
+      "unlock_stride": 16,
+      "maximum": 9
+    },
+    "login": {
+      "function": 87947120,
+      "predicate": 88008208,
+      "call": 87953583,
+      "branch": 87953591,
+      "expected": "757e",
+      "replacement": "eb7e",
+      "continuation": 87953719,
+      "account_server_offset": 2368,
+      "class_stack_offset": 8145,
+      "requested_map_register": "r15",
+      "requested_length_stack": 8504,
+      "connection_vector_server_offset": 2352,
+      "connection_map_pointer": 152,
+      "connection_map_length": 160,
+      "ownership": "borrowed native map strings; fallback bypass changes control flow only"
+    },
+    "command_destructor": {
+      "entry": 26768,
+      "equivalent_aliases": [
+        26768,
+        245856,
+        87886448,
+        88709600,
+        88896176
+      ],
+      "variant": "trimmed-command-switch",
+      "expected": "41565657534883ec28",
+      "external_dependencies": [
+        8656
+      ]
+    },
+    "account_config": {
+      "proof": "complete MAP_SELECT logic, typed map-name lookup, unchanged account/config fields and native predicate semantics",
+      "account": {
+        "unlock_pointer": 32,
+        "unlock_count": 40,
+        "unlock_stride": 16,
+        "entry_class": 0,
+        "entry_unlocked_count": 8,
+        "minimum": 1,
+        "maximum": 9
+      },
+      "config": {
+        "map_pointer": 32,
+        "map_length": 40,
+        "class_id": 56
+      },
+      "arguments": {
+        "rcx": "result",
+        "rdx": "account",
+        "r8": "config"
+      }
+    },
+    "victory_cases": [
+      {
+        "tag": 8,
+        "before": 87864836,
+        "after": 87985076,
+        "structure": {
+          "structure_equivalent": true,
+          "field_changes": [
+            {
+              "old_rva": "0x53cb633",
+              "new_rva": "0x53e8be3",
+              "base": "rbp",
+              "index": null,
+              "scale": 1,
+              "width": 8,
+              "old_offset": 6960,
+              "new_offset": 7040,
+              "stack": true
+            },
+            {
+              "old_rva": "0x53cb643",
+              "new_rva": "0x53e8bf3",
+              "base": "rsi",
+              "index": null,
+              "scale": 1,
+              "width": 8,
+              "old_offset": 1544,
+              "new_offset": 1560,
+              "stack": false
+            },
+            {
+              "old_rva": "0x53cb64a",
+              "new_rva": "0x53e8bfa",
+              "base": "rsi",
+              "index": null,
+              "scale": 1,
+              "width": 8,
+              "old_offset": 1528,
+              "new_offset": 1544,
+              "stack": false
+            },
+            {
+              "old_rva": "0x53cb653",
+              "new_rva": "0x53e8c03",
+              "base": "rsi",
+              "index": null,
+              "scale": 1,
+              "width": 8,
+              "old_offset": 1528,
+              "new_offset": 1544,
+              "stack": false
+            },
+            {
+              "old_rva": "0x53cb660",
+              "new_rva": "0x53e8c10",
+              "base": "rsi",
+              "index": null,
+              "scale": 1,
+              "width": 8,
+              "old_offset": 1536,
+              "new_offset": 1552,
+              "stack": false
+            },
+            {
+              "old_rva": "0x53cb676",
+              "new_rva": "0x53e8c26",
+              "base": "rbp",
+              "index": null,
+              "scale": 1,
+              "width": 8,
+              "old_offset": 6960,
+              "new_offset": 7040,
+              "stack": true
+            },
+            {
+              "old_rva": "0x53cb695",
+              "new_rva": "0x53e8c45",
+              "base": "rsi",
+              "index": null,
+              "scale": 1,
+              "width": 8,
+              "old_offset": 1544,
+              "new_offset": 1560,
+              "stack": false
+            }
+          ],
+          "instruction_changes": [],
+          "automatic_activation_allowed": false
+        },
+        "dependencies": [
+          {
+            "reference": 87920800,
+            "candidate": 88370896
+          },
+          {
+            "reference": 8704,
+            "candidate": 8704
+          },
+          {
+            "reference": 8640,
+            "candidate": 8640
+          },
+          {
+            "reference": 90746208,
+            "candidate": 91074752
+          },
+          {
+            "reference": 87868003,
+            "candidate": 87988547
+          }
+        ]
+      },
+      {
+        "tag": 9,
+        "before": 87864637,
+        "after": 87984877,
+        "structure": {
+          "structure_equivalent": true,
+          "field_changes": [],
+          "instruction_changes": [],
+          "automatic_activation_allowed": false
+        },
+        "dependencies": [
+          {
+            "reference": 87852784,
+            "candidate": 87969680
+          }
+        ]
+      }
+    ],
+    "menu_contract_verified": true,
+    "map_clamp": {
+      "site": 88007801,
+      "expected": "488b4b20488b532848c1e2044531c00f1f8400",
+      "allocation_path": 88007952
+    },
+    "unresolved": [
+      "Complete candidate adapter proof including native allocator dependency"
+    ]
+  },
+  "progression_call_contract": {
+    "reference_sha256": "20d4ce5fb1232dac64bc00a4d8c9f2bcae43fb8373ea3fa95350ab8c4f20d618",
+    "fields": {
+      "level": {
+        "offset": 1208,
+        "width": 4,
+        "reviewed_offset": 1192
+      },
+      "xp": {
+        "offset": 1212,
+        "width": 4,
+        "reviewed_offset": 1196
+      },
+      "phase": {
+        "offset": 2273,
+        "width": 1,
+        "reviewed_offset": 2255
+      },
+      "choices_pointer": {
+        "offset": 1584,
+        "width": 8,
+        "reviewed_offset": 1568
+      },
+      "choices_count": {
+        "offset": 1592,
+        "width": 8,
+        "reviewed_offset": 1576
+      },
+      "choice_kind": {
+        "offset": 2272,
+        "width": 1,
+        "reviewed_offset": 2254
+      },
+      "abilities_capacity": {
+        "offset": 856,
+        "width": 8,
+        "reviewed_offset": 856
+      },
+      "abilities_pointer": {
+        "offset": 864,
+        "width": 8,
+        "reviewed_offset": 864
+      },
+      "abilities_count": {
+        "offset": 872,
+        "width": 8,
+        "reviewed_offset": 872
+      },
+      "pending_talents": {
+        "offset": 2176,
+        "width": 4,
+        "reviewed_offset": 2160
+      },
+      "pending_chests": {
+        "offset": 2180,
+        "width": 4,
+        "reviewed_offset": 2164
+      },
+      "pending_rewards": {
+        "offset": 2184,
+        "width": 4,
+        "reviewed_offset": 2168
+      }
+    },
+    "choice_stride": 160,
+    "choice_title": {
+      "capacity": 0,
+      "pointer": 8,
+      "length": 16,
+      "width": 8,
+      "max_bytes": 1024,
+      "ownership": "native String24; borrowed read only",
+      "runtime_role": "Require exact equality with the selected native UI offer title before CHOOSE"
+    },
+    "pending_by_choice_kind": {
+      "0": "pending_talents",
+      "1": "pending_chests",
+      "2": "pending_rewards"
+    },
+    "ability_contract": {
+      "stride": 80,
+      "definition_pointer": 0,
+      "rank_offset": 32,
+      "rank_width": 4,
+      "definitions_rva": 107552952,
+      "definitions_count": 111,
+      "definition_stride": 120,
+      "name_pointer": 16,
+      "name_length": 24,
+      "new_rank": 1,
+      "offered_ui": {
+        "type": "choices",
+        "array": "choices",
+        "kind": "new",
+        "title_prefix": "New: "
+      },
+      "upgrade_ui": {
+        "kind": "upgrade",
+        "title_format": "{name} rank {rank}",
+        "rank_delta": 1,
+        "rank_delta_source": {
+          "choice_capacity_offset": 120,
+          "choice_pointer_offset": 128,
+          "choice_count_offset": 136,
+          "ability_index_offset": 144,
+          "element_size": 1,
+          "allowed_tags": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "capacity_max_exclusive": 9223372036854775808,
+          "rank_offset": 32,
+          "rank_width": 4,
+          "formula": "previous_native_rank + selected_choice_tag_count"
+        },
+        "requires": "Exact current title equals existing+1; native rank increases by selected stat-tag count; all other abilities unchanged"
+      },
+      "consumption_ui": {
+        "type": "resume"
+      }
+    },
+    "sha256": "dc165e348d0a15062f58d83530619b0f57479028a28507f449c8bcffea0fb306",
+    "entries": {
+      "CHOOSE": {
+        "entry": 88660208
+      },
+      "AWARD_XP": {
+        "entry": 88521504
+      }
+    },
+    "review_method": "Exact-release diagnostic fields; native titles, ranks and pending consumption checked on every choice"
+  }
+}

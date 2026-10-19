@@ -1,0 +1,14 @@
+[package]
+name = "azcoop-game"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op: static facts about the game builds (PE reader, hook table, layouts) and typed readers over a memory view"
+license = "MIT"
+publish = false
+
+# Pure: no Windows API, no process access. Memory is abstracted behind a trait.
+[dependencies]
+serde_json = { version = "1", features = ["float_roundtrip"] }
+
+[dev-dependencies]
+sha2 = "0.10"

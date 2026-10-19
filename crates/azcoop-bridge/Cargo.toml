@@ -1,0 +1,23 @@
+[package]
+name = "azcoop-bridge"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op: the in-game bridge (hook events, queue writes, TICK) as a state machine over a game-process trait"
+license = "MIT"
+publish = false
+
+[dependencies]
+azcoop-world = { path = "../azcoop-world" }
+azcoop-game = { path = "../azcoop-game" }
+azcoop-patch = { path = "../azcoop-patch" }
+azcoop-logic = { path = "../azcoop-logic" }
+azcoop-state = { path = "../azcoop-state" }
+azcoop-proto = { path = "../azcoop-proto" }
+serde_json = { version = "1", features = ["float_roundtrip", "preserve_order"] }
+
+[features]
+# the late-game stress test (stress.rs) and the logic crate's live-test switches; never in a shipped DLL
+test-hooks = ["azcoop-logic/test-hooks"]
+
+[dev-dependencies]
+serde_json = { version = "1", features = ["float_roundtrip"] }

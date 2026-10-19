@@ -1,0 +1,23 @@
+# The named exports of Windows' avrt.dll (ordinal name), forwarded one by one by the proxy (build.rs).
+# Taken from System32\avrt.dll of Windows 11 26200 on 18.10.2026; a build never reads System32 (cross builds, reproducible).
+# Check against a newer Windows: set AZCOOP_AVRT_FROM_SYSTEM=1 on a Windows build machine: build.rs then compares and fails on a difference.
+1 AvCreateTaskIndex
+2 AvQuerySystemResponsiveness
+3 AvQueryTaskIndexValue
+4 AvRevertMmThreadCharacteristics
+5 AvRtCreateThreadOrderingGroup
+6 AvRtCreateThreadOrderingGroupExA
+7 AvRtCreateThreadOrderingGroupExW
+8 AvRtDeleteThreadOrderingGroup
+9 AvRtJoinThreadOrderingGroup
+10 AvRtLeaveThreadOrderingGroup
+11 AvRtWaitOnThreadOrderingGroup
+12 AvSetMmMaxThreadCharacteristicsA
+13 AvSetMmMaxThreadCharacteristicsW
+14 AvSetMmThreadCharacteristicsA
+15 AvSetMmThreadCharacteristicsW
+16 AvSetMmThreadPriority
+17 AvSetMultimediaMode
+18 AvTaskIndexYield
+19 AvTaskIndexYieldCancel
+20 AvThreadOpenTaskIndex

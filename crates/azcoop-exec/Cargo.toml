@@ -1,0 +1,13 @@
+[package]
+name = "azcoop-exec"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op: command executor (validation, ordered bounded queue, live-state guards) for calls into the game"
+license = "MIT"
+publish = false
+
+# Pure logic: the actual game calls and memory views are traits, so everything is testable against a fake game.
+[dependencies]
+
+[dev-dependencies]
+serde_json = { version = "1", features = ["float_roundtrip"] }

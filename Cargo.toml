@@ -1,0 +1,68 @@
+[package]
+name = "azeroth-coop-native"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op native core (measurement prototype)"
+license = "MIT"
+publish = false
+build = "build.rs"
+
+[lib]
+# The game imports avrt.dll; Windows loads this file from the game folder first.
+name = "avrt"
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+[features]
+# Live-test switches (AZCOOP_TEST_CRASH, AZCOOP_TEST_GUEST_LETHAL_AT). OFF in every shipped build: tools/build/release.ps1 refuses a
+# DLL that contains them. Test builds: cargo build --release --features test-hooks --target-dir target/test-hooks
+test-hooks = ["azcoop-logic/test-hooks", "azcoop-bridge/test-hooks"]
+
+[dependencies]
+minhook = "0.9"
+sha2 = "0.10"
+serde_json = "1"
+base64 = "0.22"
+# Shared IPC message format for the local pipe to the network helper.
+azcoop-proto = { path = "crates/azcoop-proto" }
+# Pure packet parsing/validation (client frames, movement, template and name checks).
+azcoop-world = { path = "crates/azcoop-world" }
+# Static facts about the game builds (PE reader, profile, readers) and the generated machine code per build.
+azcoop-game = { path = "crates/azcoop-game" }
+azcoop-patch = { path = "crates/azcoop-patch" }
+azcoop-bridge = { path = "crates/azcoop-bridge" }
+azcoop-logic = { path = "crates/azcoop-logic" }
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading",
+    "Win32_System_SystemServices",
+    "Win32_System_Performance",
+    "Win32_System_Memory",
+    "Win32_System_Environment",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Kernel",
+    "Win32_System_Console",
+    "Win32_Storage_FileSystem",
+    "Win32_System_IO",
+    "Win32_System_Pipes",
+    "Win32_System_ProcessStatus",
+    "Win32_System_SystemInformation",
+] }
+
+[dev-dependencies]
+# The helper crate provides a real pipe server + handshake to test the DLL's
+# IPC client against, without a game.
+azcoop-net = { path = "crates/azcoop-net" }
+
+[workspace]
+members = [".", "crates/azcoop-proto", "crates/azcoop-net", "crates/azcoop-world", "crates/azcoop-state", "crates/azcoop-game", "crates/azcoop-exec", "crates/azcoop-logic", "crates/azcoop-patch", "crates/azcoop-bridge", "crates/avrt-probe"]
+
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = 1
+strip = "none"

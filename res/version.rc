@@ -1,0 +1,31 @@
+#include <winver.h>
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     0,1,0,0
+PRODUCTVERSION  0,1,0,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       VS_FF_PRERELEASE
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_DLL
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "Azeroth Survivors Together project"
+            VALUE "FileDescription",  "Azeroth Survivors Together co-op native core (forwards avrt.dll)"
+            VALUE "FileVersion",      "0.1.0"
+            VALUE "InternalName",     "azeroth-coop-native"
+            VALUE "LegalCopyright",   "MIT License"
+            VALUE "OriginalFilename", "avrt.dll"
+            VALUE "ProductName",      "Azeroth Survivors Together"
+            VALUE "ProductVersion",   "0.1.0"
+            VALUE "Comments",         "Game mod. Remove by deleting avrt.dll from the game folder."
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END

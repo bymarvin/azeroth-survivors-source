@@ -1,0 +1,38 @@
+[package]
+name = "azcoop-net"
+version = "0.1.0"
+edition = "2021"
+description = "Azeroth Survivors Together co-op network helper"
+license = "MIT"
+publish = false
+
+[lib]
+name = "azcoop_net"
+path = "src/lib.rs"
+
+[[bin]]
+name = "azcoop-net"
+path = "src/main.rs"
+
+[dependencies]
+azcoop-proto = { path = "../azcoop-proto" }
+serde_json = "1"
+sha2 = "0.10"
+# TLS via rustls with the ring provider (no cmake/NASM), and a self-signed
+# per-session certificate via rcgen (also on ring). No hand-written crypto.
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12", "logging"] }
+rcgen = { version = "0.13", default-features = false, features = ["pem", "ring"] }
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_Security_Authorization",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Pipes",
+    "Win32_System_Threading",
+    "Win32_System_IO",
+] }
+
+[dev-dependencies]
+# The state-message interop test builds and validates real state messages.
+azcoop-state = { path = "../azcoop-state" }
+azcoop-world = { path = "../azcoop-world" }
